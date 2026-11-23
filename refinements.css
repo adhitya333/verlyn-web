@@ -1,0 +1,116 @@
+/* Home services: restrained colour, crisp edges, unchanged card dimensions. */
+#services.home-services .card { --tile-edge: #c7dacd; --tile-bg: #f1f7f2; background: var(--tile-bg); border: 1px solid var(--tile-edge); box-shadow: inset 0 1px 0 #fff, 0 3px 10px #18302305; }
+#services.home-services .card:nth-child(2) { --tile-edge: #bfd9d6; --tile-bg: #edf6f4; }
+#services.home-services .card:nth-child(3) { --tile-edge: #c4d3e8; --tile-bg: #f0f5fc; }
+#services.home-services .card:nth-child(4) { --tile-edge: #e5cebf; --tile-bg: #fcf3ed; }
+#services.home-services .card:nth-child(5) { --tile-edge: #c6d9d7; --tile-bg: #eef6f5; }
+#services.home-services .card:nth-child(6) { --tile-edge: #e1d4b6; --tile-bg: #faf6ec; }
+#services.home-services .home-service-visual { background: color-mix(in srgb, var(--tile-bg) 65%, white); border-block-color: var(--tile-edge); }
+#services.home-services .card:hover { border-color: color-mix(in srgb, var(--tile-edge) 65%, #426c50); }
+.home-hero .home-hero__grid { gap: 26px; }
+main > .home-hero { padding-bottom: 32px; }
+
+/* The diagram and its copy share a compact, vertically centred row. */
+#connects > .wrap > .grid { align-items: center; row-gap: 28px; }
+#connects .stack-5 { display: grid; gap: 24px; }
+#connects .stack-5 > * { margin: 0; }
+#connects h2 { font-size: clamp(32px, 3.4vw, 48px); line-height: 1.08; }
+#connects .t-lead { font-size: clamp(16px, 1.5vw, 19px); }
+#connects .steps { gap: 17px; }
+#connects .steps li { position: relative; padding-bottom: 0; }
+#connects .steps li:not(:last-child)::after { content: ''; position: absolute; top: 26px; bottom: -14px; left: 11px; border-left: 1px solid #d5e2d2; }
+#connects .steps .step-n { padding-top: 2px; font-size: 12px; }
+#connects .steps b { font-size: 15px; }
+#connects .stack-5 > .link { justify-self: start; }
+#connects .frame { --ratio: 0; padding: 16px; min-height: 0; height: 420px; }
+#connects .frame::before { display: none; }
+#connects .frame > .dg { width: 100%; height: 100%; min-height: 0; }
+
+/* A live dashboard rather than a generic pipeline illustration. */
+.crm-dashboard.workflow-demo { gap: 16px; padding: 22px; background: #fbfdfc; border-color: #ccdbd5; box-shadow: 0 12px 32px #183b2710; }
+.crm-dashboard__head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.crm-dashboard__head > span { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 500; }
+.crm-dashboard__head > small { font-size: 11px; color: #657c70; }
+.crm-dashboard__metrics { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 9px; }
+.crm-dashboard__metrics > div { display: grid; gap: 7px; padding: 12px; background: #edf5f0; border: 1px solid #dce8df; border-radius: 9px; }
+.crm-dashboard__metrics > div:nth-child(2) { background: #edf3fa; border-color: #dce5ef; }
+.crm-dashboard__metrics > div:nth-child(3) { background: #f5f6e9; border-color: #e4e6d2; }
+.crm-dashboard__metrics small { font-size: 12px; color: #546b5f; }
+.crm-dashboard__metrics b { font-size: 28px; line-height: 1; font-weight: 500; font-variant-numeric: tabular-nums; }
+.crm-dashboard__chart { padding: 12px; border: 1px solid #e0e9e2; border-radius: 9px; background: #fff; }
+.crm-dashboard__chart > div { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 12px; }
+.crm-dashboard__chart b { font-size: 13px; font-weight: 500; }
+.crm-dashboard__chart span { display: flex; align-items: center; gap: 5px; font-size: 10px; color: #697e72; }
+.crm-dashboard__chart span i { width: 5px; height: 5px; border-radius: 50%; background: #7d9fc2; }
+.crm-dashboard__chart svg { display: block; width: 100%; height: auto; max-height: 135px; overflow: visible; }
+.crm-gridline { stroke: #edf1ef; stroke-width: 1; }
+.crm-chart-area { fill: #edf5ed; }
+.crm-chart-line { fill: none; stroke: #548569; stroke-width: 2.5; stroke-linejoin: round; }
+.crm-chart-booked { fill: none; stroke: #7d9fc2; stroke-width: 2; stroke-linejoin: round; stroke-dasharray: 3 4; }
+.crm-dashboard__queue { display: flex; align-items: center; justify-content: space-between; gap: 7px; font-size: 12px; }
+.crm-dashboard__queue > span { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.crm-dashboard__queue i { display: grid; place-items: center; width: 24px; height: 24px; font-size: 9px; font-style: normal; border-radius: 50%; background: #e7f0e6; }
+.crm-dashboard__queue b { font-size: 12px; font-weight: 500; }
+.crm-dashboard__queue small { color: #6a7e70; font-size: 11px; }
+.crm-dashboard__queue > strong { flex: none; border: 1px solid #ccdfd0; padding: 5px 7px; border-radius: 5px; font-size: 10px; color: #4c7556; font-weight: 500; }
+#services .home-service-visual .crm-dashboard { padding: 12px; gap: 10px; align-content: center; box-shadow: none; }
+#services .crm-dashboard__head > span { font-size: 13px; }
+#services .crm-dashboard__metrics > div { padding: 8px; gap: 4px; }
+#services .crm-dashboard__metrics small { font-size: 10px; }
+#services .crm-dashboard__metrics b { font-size: 21px; }
+#services .crm-dashboard__chart { padding: 8px; }
+#services .crm-dashboard__chart > div { margin-bottom: 5px; }
+#services .crm-dashboard__chart b { font-size: 11px; }
+#services .crm-dashboard__chart span { font-size: 9px; }
+#services .crm-dashboard__chart svg { max-height: 62px; }
+#services .crm-dashboard__queue small { display: none; }
+.crm-workflow-stack { display: grid; gap: 16px; }
+.crm-workflow-stack > .crm-dashboard { min-height: 0; }
+.crm-ai-flow.workflow-demo { gap: 15px; padding: 19px; background: #eff6f2; min-height: 0; }
+.crm-ai-flow__head { display: flex; align-items: center; gap: 8px; font-size: 15px; }
+.crm-ai-nodes { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 19px; }
+.crm-ai-nodes > div { position: relative; display: grid; align-content: center; justify-items: center; gap: 9px; text-align: center; min-height: 83px; padding: 9px 5px; border: 1px solid #cfdfd3; border-radius: 8px; background: #fff; }
+.crm-ai-nodes > div:not(:last-child)::after { content: '→'; position: absolute; top: calc(50% - 10px); left: calc(100% + 3px); color: #678d72; font-size: 15px; }
+.crm-ai-nodes b { font-size: 11px; font-weight: 500; line-height: 1.35; }
+.crm-ai-flow > small { font-size: 12px; color: #597562; line-height: 1.5; }
+.feature-delivery--record .delivery-points > li { position: relative; padding-left: 23px; }
+.feature-delivery--record .delivery-points > li::before { content: '→'; position: absolute; left: 0; top: 14px; color: var(--p-accent); }
+@media (prefers-reduced-motion: no-preference) {
+  .crm-dashboard.demo-looping .crm-chart-line { stroke-dasharray: 420; animation: crm-draw 6s ease-in-out infinite; }
+}
+@keyframes crm-draw { 0%, 100% { stroke-dashoffset: 150; } 40%, 85% { stroke-dashoffset: 0; } }
+
+/* All five stages sit together, with a directional connector for each handoff. */
+#steps .section-head { margin-bottom: 28px; }
+#steps .picker { margin-top: 0; }
+#steps .rail { width: 100%; max-width: 1000px; margin: 0 auto 24px; padding-block: 12px; }
+#steps .rail::before, #steps .rail::after { top: 33px; }
+#steps .rail__step { padding-bottom: 0; }
+#steps .rail__step:not(:last-child)::after { content: '›'; position: absolute; top: 11px; left: calc(100% - 6px); width: 12px; height: 22px; color: #7b9672; font-size: 24px; line-height: 20px; }
+#steps .rail__step b { margin-top: 6px; }
+#steps .picker__panels { margin-top: 0; }
+@media (max-width: 767px) {
+  #connects .frame { height: 340px; padding: 12px; }
+  #connects .stack-5 { gap: 20px; }
+  .crm-dashboard.workflow-demo { padding: 16px; gap: 12px; }
+  .crm-dashboard__metrics > div { padding: 9px; }
+  .crm-dashboard__metrics small { font-size: 11px; }
+  .crm-ai-nodes { gap: 13px; }
+  .crm-ai-nodes b { font-size: 10px; }
+  .crm-ai-nodes > div:not(:last-child)::after { left: calc(100% + 1px); font-size: 13px; }
+  #steps .rail { margin-bottom: 20px; }
+}
+@media (max-width: 479px) {
+  #steps .rail__step { padding-inline: 1px; gap: 5px; }
+  #steps .rail__step i { width: 32px; height: 32px; font-size: 11px; }
+  #steps .rail__step b { font-size: 11px; }
+  #steps .rail::before, #steps .rail::after { top: 28px; }
+  #steps .rail__step:not(:last-child)::after { top: 7px; font-size: 19px; }
+  .crm-ai-nodes { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+  .crm-ai-nodes > div:nth-child(2)::after { content: '↓'; left: 50%; top: calc(100% - 2px); }
+  .crm-ai-nodes > div:nth-child(3) { grid-column: 2; grid-row: 2; }
+  .crm-ai-nodes > div:nth-child(4) { grid-column: 1; grid-row: 2; }
+  .crm-ai-nodes > div:nth-child(3)::after { content: '←'; left: auto; right: calc(100% + 2px); }
+  .crm-dashboard__chart span { font-size: 9px; }
+  .crm-dashboard__queue small { display: none; }
+}

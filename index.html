@@ -72,6 +72,7 @@ html[data-theme="dark"] {
 <link rel="stylesheet" href="home-showcase.css?v=verlyn-20261123-10">
 
 <link rel="stylesheet" href="polish.css?v=20261123-12">
+<link rel="stylesheet" href="refinements.css?v=20261123-13">
 </head>
 <body>
 <!-- type: software (site-kind software): Verlyn Tech installs CRM, landing pages, ads, lead generation, AI agents and automation for UAE SMEs
@@ -163,7 +164,6 @@ html[data-theme="dark"] {
         <div class="showcase-float showcase-tracking"><div class="showcase-card-title"><img src="assets/icons/google-analytics.svg" alt="" width="24" height="24"><b>Source tracked</b></div><div class="showcase-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>From ad to enquiry</small></div>
         <div class="showcase-float showcase-ready"><span class="showcase-ready__check" aria-hidden="true">✓</span><span><b>Ready for your team</b><small>Qualified. Assigned. Connected.</small></span></div>
       </div></div>
-      <div class="connected-tools" aria-label="Explore the tools we connect"><a href="agentic-ai.html"><img src="assets/icons/whatsapp.svg" alt="" width="24" height="24"><span>WhatsApp</span></a><a href="paid-ads.html"><img src="assets/icons/meta.svg" alt="" width="24" height="24"><span>Meta</span></a><a href="paid-ads.html"><img src="assets/icons/google-ads.svg" alt="" width="24" height="24"><span>Google Ads</span></a><a href="crm.html"><img src="assets/icons/instagram.svg" alt="" width="24" height="24"><span>Instagram</span></a><a href="agentic-ai.html"><img src="assets/icons/google-calendar.svg" alt="" width="24" height="24"><span>Google Calendar</span></a><a href="ai-automation.html"><img src="assets/icons/google-sheets.svg" alt="" width="24" height="24"><span>Google Sheets</span></a></div>
     </div></div>
   </section>
 
@@ -173,11 +173,12 @@ html[data-theme="dark"] {
       <div class="home-service-grid">
         <article class="card scene--mint">
           <h3><a class="service-gallery__link" href="crm.html"><img src="assets/icons/ui-database.svg" alt="" width="23" height="23">CRM setup</a></h3><p>Every lead. One clear pipeline.</p>
-          <div class="home-service-visual"><div class="workflow-demo workflow-crm" role="group" aria-label="A new lead moves through assigned to booked">
-            <div class="workflow-demo__head"><b>From new to booked</b></div>
-            <div class="workflow-pipeline"><div><b>New</b></div><div><b>Assigned</b></div><div><b>Booked</b></div><div class="workflow-lead"><span class="workflow-avatar">F</span><strong>Fatima</strong></div></div>
-            <div class="home-demo-note"><img src="assets/icons/ui-user.svg" alt="" width="20" height="20"><span>Owner: Reem</span><b>✓ Follow-up set</b></div>
-          </div></div><a class="link review-demo-link" href="crm.html#get">Explore CRM</a>
+          <div class="home-service-visual"><div class="workflow-demo crm-dashboard crm-dashboard--compact" role="group" aria-label="Example CRM dashboard with lead totals, pipeline activity and follow-up queue">
+ <div class="crm-dashboard__head"><span><img src="assets/icons/ui-database.svg" width="19" height="19" alt=""> CRM overview</span><small>Example</small></div>
+ <div class="crm-dashboard__metrics"><div><small>Open leads</small><b>12</b></div><div><small>Follow-ups</small><b>5</b></div><div><small>Booked</small><b>8</b></div></div>
+ <div class="crm-dashboard__chart"><div><b>Pipeline activity</b><span>Enquiries <i></i> Bookings</span></div><svg viewBox="0 0 360 90" role="img" aria-label="Illustrative enquiry and booking activity"><path class="crm-gridline" d="M0 18H360M0 45H360M0 72H360"/><path class="crm-chart-area" d="M0 75 36 63 72 68 108 46 144 53 180 30 216 39 252 18 288 25 324 12 360 8V90H0Z"/><path class="crm-chart-line" d="M0 75 36 63 72 68 108 46 144 53 180 30 216 39 252 18 288 25 324 12 360 8"/><path class="crm-chart-booked" d="M0 82 36 79 72 80 108 68 144 72 180 56 216 60 252 41 288 46 324 31 360 27"/></svg></div>
+ <div class="crm-dashboard__queue"><span><i>FA</i><b>Fatima A.</b><small>Reem · follow-up</small></span><strong>Assigned</strong></div>
+ </div></div><a class="link review-demo-link" href="crm.html#get">Explore CRM</a>
         </article>
         <article class="card scene--sea">
           <h3><a class="service-gallery__link" href="landing-pages.html"><img src="assets/icons/demo/ui-globe.svg" alt="" width="23" height="23">Landing pages &amp; SEO</a></h3><p>Get found. Capture the enquiry.</p>
