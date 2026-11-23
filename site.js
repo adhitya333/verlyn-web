@@ -226,12 +226,17 @@ document.querySelectorAll('[data-workflow-page]').forEach(preview => {
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
   const demos = new IntersectionObserver(entries => {
     for (const { target, isIntersecting } of entries) {
-      target.classList.toggle('demo-looping', isIntersecting);
+      target.classList.add('demo-looping');
       target.classList.toggle('is-offscreen', !isIntersecting);
     }
-  }, { threshold: .05 });
+  }, { threshold: 0, rootMargin: '80px 0px' });
   document.querySelectorAll('.industry-example, .overview-demo, .flow, .workflow-demo, .journey-visual').forEach(demo => demos.observe(demo));
 }
+
+// Preserve loop progress at viewport boundaries and pause in background tabs.
+const syncMotionVisibility = () => html.classList.toggle('motion-paused', document.hidden);
+document.addEventListener('visibilitychange', syncMotionVisibility);
+syncMotionVisibility();
 
 // ---------------------------------------------------------------- Abu Dhabi clock (contact page)
 const clock = document.querySelector('[data-ad-clock]');

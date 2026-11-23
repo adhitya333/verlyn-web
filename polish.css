@@ -10,10 +10,15 @@
 #services .home-service-visual .workflow-page-copy > strong { font-size: 22px; }
 #services .home-service-visual .workflow-page-copy > button { font-size: 12px; padding-inline: 9px; }
 @media (prefers-reduced-motion: no-preference) {
-  .reveal-ready { opacity: .01; transform: translateY(9px); transition: opacity .42s ease-out, transform .42s ease-out; }
-  .reveal-ready.is-revealed { opacity: 1; transform: none; }
+  .reveal-ready { opacity: .01; transition: opacity .4s ease-out; }
+  .reveal-ready.is-revealed { opacity: 1; }
+  .home-hero[data-enter="off"] > .wrap { animation: home-whole-fade .55s ease-out both; }
+  .showcase-stage.demo-looping:not(.is-offscreen) .showcase-float { will-change: transform; }
 }
+@keyframes home-whole-fade { from { opacity: 0; } to { opacity: 1; } }
+.is-offscreen, .is-offscreen *, .motion-paused *, .motion-paused *::before, .motion-paused *::after { animation-play-state: paused !important; }
 @media (max-width: 767px) {
+  .showcase-stage.demo-looping .showcase-float { animation: none; will-change: auto; }
   .home-showcase-slot { margin-top: 0; }
   .home-showcase-slot .showcase-stage { height: auto; }
   .home-hero .connected-tools { margin-top: 20px; }
