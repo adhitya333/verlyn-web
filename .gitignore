@@ -1,0 +1,24 @@
+# Local development caches and review artifacts
+.npm-task-cache/
+.taste-skill/
+.claude/
+.agents/
+.codex/
+shots/
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+Thumbs.db
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Internal development notes
+pipelining-notes.html
+skills-lock.json

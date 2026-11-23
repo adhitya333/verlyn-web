@@ -1,0 +1,24 @@
+.workflow-browser { position: relative; }
+.workflow-browser > .workflow-page-art { position: absolute; right: 0; bottom: 0; display: block; width: 43%; height: calc(100% - 49px); object-fit: cover; object-position: 55% center; border-left: 1px solid #d7e2d9; }
+.workflow-browser .workflow-page-copy { position: relative; min-height: 132px; padding-right: 46%; align-content: center; }
+.workflow-browser .workflow-page-copy > strong { font-size: 25px; }
+.home-showcase-slot { width: 100%; margin-top: -12px; scroll-margin-top: calc(var(--nav) + 24px); }
+.home-showcase-slot .showcase-stage { height: 454px; text-align: left; }
+.home-hero .hero__c .btn-row { margin-top: 12px; }
+.home-hero .connected-tools { margin-top: 8px; }
+#services .home-service-visual .workflow-browser .workflow-page-copy { min-height: 118px; padding: 12px 46% 12px 11px; }
+#services .home-service-visual .workflow-page-copy > strong { font-size: 22px; }
+#services .home-service-visual .workflow-page-copy > button { font-size: 12px; padding-inline: 9px; }
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-ready { opacity: .01; transform: translateY(9px); transition: opacity .42s ease-out, transform .42s ease-out; }
+  .reveal-ready.is-revealed { opacity: 1; transform: none; }
+}
+@media (max-width: 767px) {
+  .home-showcase-slot { margin-top: 0; }
+  .home-showcase-slot .showcase-stage { height: auto; }
+  .home-hero .connected-tools { margin-top: 20px; }
+}
+@media (max-width: 359px) {
+  #services .home-service-visual .workflow-page-copy > strong { font-size: 20px; }
+  #services .home-service-visual .workflow-page-copy > button { font-size: 11px; }
+}
