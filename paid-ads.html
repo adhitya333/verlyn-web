@@ -61,19 +61,21 @@ html[data-theme="dark"] {
 <link rel="stylesheet" href="assets/ui/chat/fragment.css">
 <link rel="stylesheet" href="assets/ui/toggles/fragment.css">
 <link rel="stylesheet" href="assets/ui/doc/fragment.css">
-<link rel="stylesheet" href="site.css?v=verlyn-20261123-9">
+<link rel="stylesheet" href="site.css?v=20261124-controls-1">
 <link rel="stylesheet" href="pages.css?v=verlyn-20261123-9">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script src="assets/backgrounds/backgrounds.js"></script>
-<link rel="stylesheet" href="workflow.css?v=verlyn-20261123-10">
+<link rel="stylesheet" href="workflow.css?v=20261124-laptop-1">
 
 <link rel="stylesheet" href="polish.css?v=20261123-14">
+<link rel="stylesheet" href="ads-receipt.css?v=20261124-1">
+<link rel="stylesheet" href="service-detail.css?v=20261125-3">
 </head>
-<body>
+<body class="service-detail-page">
 <header class="nav" data-verlyn-nav>
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
-    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
     <nav class="nav__links" aria-label="Main">
       <div class="nav__item"><a class="nav__link" href="index.html">Home</a></div>
       <div class="nav__item">
@@ -131,25 +133,18 @@ html[data-theme="dark"] {
       <div class="wrap"><div class="hero-text feature-hero__layout">
         <div class="feature-hero__copy"><p class="scene-kicker">PAID ADS</p><h1 id="hero-h">See which ads lead to booked visits</h1>
           <p class="hero__lead">Run Meta, Google and TikTok campaigns for UAE SMEs and follow enquiries through to the CRM.</p><div class="btn-row"><a class="btn btn--primary" href="contact.html#book">Book a pilot call</a><a class="btn btn--secondary" href="#get">What’s included</a></div></div>
-        <div class="feature-hero__media" data-enter-media><div class="service-scene scene--blue" data-scene>
-  <div class="scene-head"><p>Which ad earns more bookings?</p><span>Example data</span></div>
-  <div class="scene-tabs" role="tablist" aria-label="Campaign metric"><button type="button" role="tab" id="ad-metric-t0" aria-controls="ad-metric-p0" aria-selected="true" tabindex="0">Enquiries</button>
-<button type="button" role="tab" id="ad-metric-t1" aria-controls="ad-metric-p1" aria-selected="false" tabindex="-1">Bookings</button></div>
-<div class="scene-tab-panel" role="tabpanel" id="ad-metric-p0" aria-labelledby="ad-metric-t0"><div class="ad-pair" aria-label="Enquiries"><div><span>Ad A</span><b>24</b><i style="--fill:80%" aria-hidden="true"></i><small>AED 10 per enquiry</small></div><div><span>Ad B</span><b>18</b><i style="--fill:60%" aria-hidden="true"></i><small>AED 13 per enquiry</small></div></div></div>
-<div class="scene-tab-panel" role="tabpanel" id="ad-metric-p1" aria-labelledby="ad-metric-t1" hidden><div class="ad-pair" aria-label="Bookings"><div><span>Ad A</span><b>4</b><i style="--fill:27%" aria-hidden="true"></i><small>AED 60 per booking</small></div><div><span>Ad B</span><b>8</b><i style="--fill:54%" aria-hidden="true"></i><small>AED 30 per booking</small></div></div></div>
-  
-</div></div>
+        <div class="feature-hero__media" data-enter-media><div class="detail-preview campaign-studio" data-detail-visual="ads" role="group" aria-label="Interactive workshop ad creative preview"><div class="preview-top"><span>CREATIVE STUDIO</span><span>03 / ADS</span></div><fieldset class="preview-switch"><legend>Choose a placement</legend><label><input type="radio" name="creative-format" id="creative-social" checked> Social</label><label><input type="radio" name="creative-format" id="creative-search"> Search</label></fieldset><div class="creative-social"><div class="creative-poster"><small>THE CLAY ROOM</small><strong>Make something<br>with your weekend.</strong><div class="creative-pot" aria-hidden="true"><i></i><b></b></div><span>Pottery workshops · Abu Dhabi</span></div><div class="creative-action"><span>Find your next creative afternoon.</span><b>View workshop ↗</b></div></div><div class="creative-search"><div class="search-query">pottery workshop abu dhabi <span>⌕</span></div><small>Sponsored · The Clay Room</small><strong>Pottery classes for curious hands</strong><p>Explore the studio, choose a workshop and send an enquiry.</p><span>Workshops &nbsp; · &nbsp; Group sessions</span></div><div class="creative-source"><img src="assets/icons/google-analytics.svg" width="22" height="22" alt=""><span>Creative → enquiry → CRM source</span></div></div></div>
       </div></div>
     </section>
 
   <section class="section section--tight feature-delivery feature-delivery--analysis" id="get" aria-labelledby="get-h">
       <div class="wrap service-workflow-layout">
         <div class="service-workflow-copy"><h2 id="get-h">From ad spend to real outcomes</h2><ul class="delivery-points"><li data-beat style="--beat:0"><h3>Test the offer</h3><p>Build and compare creative variants for a defined audience.</p></li><li data-beat style="--beat:1"><h3>Follow booked leads</h3><p>Connect campaign activity to WhatsApp and the CRM.</p></li><li data-beat style="--beat:2"><h3>Share what happened</h3><p>Review bookings and cost per appointment in a plain-English report.</p></li></ul></div>
-        <div class="service-workflow-visual"><div class="workflow-demo workflow-ads" role="group" aria-label="Track campaigns through to bookings"><div class="workflow-demo__head"><b>Track campaigns through to bookings</b></div>
-      <div class="workflow-ad-summary"><span><small>Sample ad spend</small><strong>AED 600</strong></span><span><small>Cost per booking</small><strong>AED 75</strong></span></div>
-      <div class="workflow-campaign"><img src="assets/icons/google-ads.svg" alt="" width="25" height="25"><div><b>Search campaign</b><small>AED 240 spend</small><span class="workflow-ad-track"><i style="--ad-width:60%"></i></span></div><strong>3<small>bookings</small></strong></div>
-      <div class="workflow-campaign"><img src="assets/icons/meta.svg" alt="" width="25" height="25"><div><b>Social campaign</b><small>AED 360 spend</small><span class="workflow-ad-track"><i style="--ad-width:100%"></i></span></div><strong>5<small>bookings</small></strong></div>
-      <div class="workflow-outcome"><img src="assets/icons/ui-database.svg" alt="" width="18" height="18">8 bookings linked to their original campaigns</div></div></div>
+        <div class="service-workflow-visual"><div class="ad-source-receipt" data-ad-example="source-receipt" data-detail-visual="ads-receipt" role="group" aria-label="Illustrative enquiry attribution receipt">
+<div class="ad-source-receipt__head"><img src="assets/icons/google-ads.svg" alt="" width="30" height="30"><span><b>An enquiry with its source</b><small>Campaign attribution preview</small></span></div>
+<div class="ad-source-receipt__lead"><span>Enquiry received</span><b>“Can I book a visit?”</b></div>
+<details><summary>Trace this enquiry</summary><ol><li><i>1</i><span><b>Search ad clicked</b><small>Campaign and source captured</small></span></li><li><i>2</i><span><b>Website form submitted</b><small>The enquiry keeps its campaign context</small></span></li><li><i>3</i><span><b>CRM record created</b><small>Owner and next action assigned</small></span></li></ol></details>
+</div></div>
       </div>
     </section>
 
@@ -177,7 +172,7 @@ html[data-theme="dark"] {
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
-          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
           <p class="footer__lede">Growth systems for UAE SMEs, from Abu Dhabi.</p>
         </div>
         <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="crm.html">CRM</a></li><li><a href="paid-ads.html">Paid ads</a></li><li><a href="agentic-ai.html">Agentic AI</a></li></ul></div>
@@ -196,6 +191,6 @@ html[data-theme="dark"] {
 <script type="module" src="assets/system.js?v=verlyn-20261123-9"></script>
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>
-<script type="module" src="site.js?v=20261123-14"></script>
+<script type="module" src="site.js?v=20261124-controls-1"></script>
 </body>
 </html>

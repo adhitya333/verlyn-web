@@ -76,9 +76,9 @@
 html[data-theme="dark"] .theme-toggle__moon, html:not([data-theme="dark"]) .theme-toggle__sun { display: none; }
 @media (prefers-reduced-motion: reduce) { .theme-toggle { transition: none; } }
 
-/* the colour change itself: a short cross-fade, off under reduced motion */
-html.theme-fade, html.theme-fade * { transition: background-color .3s ease, color .3s ease, border-color .3s ease !important; }
-@media (prefers-reduced-motion: reduce) { html.theme-fade, html.theme-fade * { transition: none !important; } }
+/* Transition the page shell rather than repainting every descendant during a theme switch. */
+html, body, .nav, .footer { transition: background-color .16s ease, color .16s ease; }
+@media (prefers-reduced-motion: reduce) { html, body, .nav, .footer { transition: none; } }
 
 /* the comparison's own column dot takes the accent in both themes */
 .cmp__us::before { background: var(--p-accent); }

@@ -206,9 +206,9 @@ main > .feature-delivery > .wrap.service-workflow-layout {
 }
 
 /* The same title spacing and scale apply to every inner page. */
-html body main > .hero:not(.home-hero),
-html body main > .section:first-child { padding-top: calc(var(--nav) + 56px); }
-html body main > section:first-child:not(.home-hero) h1, .contact-page #book-h { font-size: clamp(38px, 4.5vw, 64px); line-height: 1.06; margin: 0; }
+html body:not(.service-detail-page) main > .hero:not(.home-hero),
+html body:not(.service-detail-page) main > .section:first-child { padding-top: calc(var(--nav) + 56px); }
+html body:not(.service-detail-page) main > section:first-child:not(.home-hero) h1, .contact-page #book-h { font-size: clamp(38px, 4.5vw, 64px); line-height: 1.06; margin: 0; }
 .hero:not(.home-hero) .scene-kicker { display: none; }
 .hero:not(.home-hero) .feature-hero__layout { align-items: start; }
 .hero:not(.home-hero) :is(.feature-hero__copy, .review-intro, .services-intro__copy, .hero__in > div) { display: grid; align-content: start; gap: 18px; }
@@ -252,7 +252,7 @@ html body .industry-hero + #list { padding-top: 30px; }
 @keyframes workflow-answer { 0%, 8%, 100% { opacity: .45; transform: translateY(3px); } 20%, 88% { opacity: 1; transform: translateY(0); } }
 @media (max-width: 767px) {
   main > .feature-delivery > .wrap.service-workflow-layout { grid-template-columns: minmax(0, 1fr); }
-  html body main > .hero:not(.home-hero), html body main > .section:first-child { padding-top: calc(var(--nav) + 32px); }
+  html body:not(.service-detail-page) main > .hero:not(.home-hero), html body:not(.service-detail-page) main > .section:first-child { padding-top: calc(var(--nav) + 32px); }
   .service-workflow-visual .workflow-demo { min-height: 0; }
   .workflow-answers { gap: 6px; }
   .workflow-answers > div { padding: 11px 8px; }

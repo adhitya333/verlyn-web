@@ -1,0 +1,106 @@
+/* Each industry owns its example; none uses the shared service demos. */
+.industry-clinic.industry-preview { background: #e5f4e9; border-color: #afd5bb; }
+.industry-property.industry-preview { background: #e4edfc; border-color: #b6cbed; }
+.industry-restaurant.industry-preview { background: #fff0dc; border-color: #e8c99c; }
+.industry-shipment.industry-preview { background: #def3f3; border-color: #a3d3d4; }
+.industry-salon.industry-preview { background: #fbe5ed; border-color: #e8b6c7; }
+.ind__tab { --industry-color: #46815b; }
+.ind__tab#realestate { --industry-color: #527fbd; }
+.ind__tab#fnb { --industry-color: #b98637; }
+.ind__tab#logistics { --industry-color: #39878a; }
+.ind__tab#salons { --industry-color: #b86c88; }
+.ind .ind__tab::before { background: color-mix(in srgb, var(--industry-color) 35%, transparent); }
+.ind .ind__tab[aria-selected="true"] { background: color-mix(in srgb, var(--industry-color) 10%, var(--p-bg)); }
+.ind .ind__tab[aria-selected="true"]::before { background: var(--industry-color); }
+.industry-preview .clinic-week > span { background: #f5fcf6; }
+.industry-preview .clinic-week__day { background: #bde1bd; }
+.industry-preview .clinic-selection { background: #cee8d1; }
+.industry-preview { padding: 22px; border: 1px solid #d7e2df; border-radius: 18px; color: #263d35; background: #fafdfc; color-scheme: light; font-size: 14px; }
+.industry-preview__head { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 22px; }
+.industry-preview__head > b { font-size: 18px; font-weight: 500; }
+.industry-preview__head > span { font-size: 12px; color: #64796f; }
+.industry-preview small { display: block; font-size: 12px; line-height: 1.5; color: #5d7468; }
+.industry-preview summary { cursor: pointer; min-height: 44px; font-size: 14px; line-height: 1.5; }
+.industry-preview summary:focus-visible, .industry-preview input:focus-visible { outline: 2px solid #4f7a00; outline-offset: 3px; }
+.industry-preview__note { font-size: 13px; line-height: 1.6; color: #5d7468; margin: 20px 0 0; }
+.clinic-week { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-bottom: 24px; }
+.clinic-week > span { display: grid; justify-items: center; gap: 8px; padding: 13px 4px; border-radius: 10px; color: #617a70; background: #edf4f0; font-size: 12px; }
+.clinic-week b { font-size: 21px; font-weight: 500; color: #365b49; }
+.clinic-week .clinic-week__day { background: #dcecdc; box-shadow: inset 0 0 0 1px #a8c8ac; }
+.clinic-slots { margin: 0 0 20px; padding: 0; border: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.clinic-slots legend { margin-bottom: 10px; font-size: 14px; }
+.clinic-slots label { display: inline-flex; min-height: 44px; align-items: center; gap: 8px; padding: 0 12px; border: 1px solid #cdded1; border-radius: 9px; background: #fff; }
+.clinic-slots input, .salon-site__switch input { accent-color: #4f775c; width: 16px; height: 16px; }
+.clinic-selection { display: flex; align-items: center; gap: 14px; padding: 18px; border-radius: 12px; background: #e9f3e8; }
+.clinic-selection b { display: block; margin-bottom: 4px; font-weight: 500; font-size: 17px; }
+.clinic-selection__fri { display: none; }
+.industry-clinic:has(#clinic-fri:checked) .clinic-selection__thu { display: none; }
+.industry-clinic:has(#clinic-fri:checked) .clinic-selection__fri { display: block; }
+.property-record { border: 1px solid #d4dfe8; background: #fff; border-radius: 12px; overflow: hidden; }
+.property-record + .property-record { margin-top: 14px; }
+.property-record summary { display: flex; align-items: center; gap: 14px; padding: 16px; }
+.property-record summary b { display: block; font-size: 16px; font-weight: 500; }
+.property-building { display: grid; place-items: center; width: 50px; height: 54px; flex: none; border-radius: 9px; background: #dce8f0; color: #52738e; font-size: 34px; }
+.property-building--sand { background: #f0e9d9; color: #8f7950; }
+.property-record dl { margin: 0; padding: 0 16px 16px; }
+.property-record dl > div { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; border-top: 1px solid #e7edf0; padding-top: 12px; margin-top: 12px; font-size: 13px; }
+.property-record dt { color: #657a82; }
+.property-record dd { margin: 0; color: #36546a; text-align: right; }
+.industry-property { background: #edf4f8; border-color: #cedee8; }
+.industry-restaurant { background: #f7f1e9; border-color: #e3d4c1; }
+.restaurant-poster { position: relative; min-height: 240px; padding: 22px; border-radius: 12px; background: #314e3d; overflow: hidden; color: #fbf5df; }
+.restaurant-poster > small { color: #c5d2ba; letter-spacing: .06em; }
+.restaurant-poster strong { position: relative; z-index: 1; display: block; font: 400 34px/1.06 Georgia, serif; margin: 20px 0 28px; max-width: 8ch; }
+.restaurant-poster svg { position: absolute; width: 47%; height: auto; right: -1%; bottom: 20px; }
+.restaurant-poster > span { position: relative; z-index: 1; font-size: 12px; }
+.restaurant-reservation { margin-top: 16px; }
+.restaurant-reservation summary { display: flex; align-items: center; justify-content: center; border: 1px solid #cbb89c; border-radius: 8px; background: #fff9; }
+.restaurant-ticket { display: grid; grid-template-columns: 104px 1fr; gap: 18px; align-items: center; padding: 20px 0 0; }
+.restaurant-tables { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.restaurant-tables i { display: grid; place-items: center; height: 39px; border-radius: 8px; background: #e8ddc8; color: #8c7753; font-style: normal; }
+.restaurant-tables .is-requested { background: #52774a; color: #fff; box-shadow: 0 0 0 3px #d6e2c6; }
+.restaurant-ticket p { display: grid; gap: 6px; margin: 0; font-size: 13px; }
+.restaurant-ticket p b { font-size: 15px; font-weight: 500; }
+.industry-shipment { background: #edf7f7; border-color: #c6dfe0; }
+.manifest-title { display: flex; gap: 14px; align-items: center; margin-bottom: 18px; }
+.manifest-title > span { color: #4a7b80; font-size: 46px; line-height: 1; }
+.manifest-title b { display: block; font-size: 18px; font-weight: 500; }
+.manifest-files { list-style: none; padding: 0; margin: 0; }
+.manifest-files li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 0; border-top: 1px solid #d2e4e4; }
+.manifest-files li b { font-size: 12px; font-weight: 500; color: #4d7c70; }
+.manifest-files .manifest-files__missing b { color: #9a6542; }
+.manifest-exception summary { display: flex; align-items: center; color: #38656c; text-decoration: underline; text-underline-offset: 5px; }
+.manifest-exception > div { display: flex; gap: 12px; align-items: center; padding: 15px; background: #fff; border-radius: 10px; }
+.manifest-exception b { display: block; font-weight: 500; margin-bottom: 4px; }
+.industry-salon { background: #fbf2ee; border-color: #e5cec2; padding: 0; overflow: hidden; }
+.salon-site__nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 20px; border-bottom: 1px solid #ecdbd1; color: #715747; }
+.salon-site__nav b { font: 400 23px/1 Georgia, serif; letter-spacing: -.05em; }
+.salon-site__nav > span { font-size: 12px; }
+.salon-site__switch { display: flex; flex-wrap: wrap; gap: 16px; margin: 0; padding: 16px 20px 0; border: 0; }
+.salon-site__switch legend { padding-top: 16px; font-size: 12px; color: #886e5c; }
+.salon-site__switch label { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; }
+.salon-site__hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 10px; padding: 22px 20px; align-items: center; }
+.salon-site__hero strong { display: block; margin-top: 12px; font: 400 30px/1.1 Georgia, serif; color: #77523f; }
+.salon-site__objects { height: 155px; position: relative; border-radius: 70px 70px 12px 12px; background: #e5c6b2; overflow: hidden; }
+.salon-site__objects i { position: absolute; bottom: 12px; left: 15%; width: 34%; height: 74%; border: 1px solid #fff5; border-radius: 9px 9px 5px 5px; background: linear-gradient(90deg, #d2b18c, #eee0c6 42%, #c2a47f); box-shadow: 3px 4px 8px #69513b20; }
+.salon-site__objects i + i { left: 58%; width: 24%; height: 50%; background: linear-gradient(90deg, #879877, #c4cfac 42%, #7b896a); }
+.salon-site__objects span { position: absolute; left: 23%; top: 24px; width: 18%; height: 10px; border-radius: 3px; background: #625a45; }
+.salon-site__hero .salon-site__wellness { display: none; }
+.industry-salon:has(#salon-wellness:checked) .salon-site__hair { display: none; }
+.industry-salon:has(#salon-wellness:checked) .salon-site__wellness { display: block; }
+.industry-salon:has(#salon-wellness:checked) .salon-site__objects { background: #d6decd; }
+.salon-treatments { margin: 0 20px 20px; }
+.salon-treatments summary { display: inline-flex; align-items: center; padding: 0 16px; background: #785d49; color: #fff; border-radius: 5px; }
+.salon-treatments p { font-size: 13px; color: #785d49; margin: 14px 0 0; }
+@media (max-width: 639px) {
+  .industry-preview { padding: 16px; }
+  .industry-preview__head { gap: 10px; margin-bottom: 18px; }
+  .industry-preview__head > b { font-size: 17px; }
+  .clinic-week { gap: 5px; }
+  .property-record summary { padding: 12px; gap: 10px; }
+  .restaurant-poster { min-height: 225px; padding: 18px; }
+  .restaurant-poster strong { font-size: 31px; }
+  .restaurant-ticket { gap: 12px; }
+  .industry-salon { padding: 0; }
+  .salon-site__hero strong { font-size: 25px; }
+}

@@ -61,19 +61,21 @@ html[data-theme="dark"] {
 <link rel="stylesheet" href="assets/ui/chat/fragment.css">
 <link rel="stylesheet" href="assets/ui/toggles/fragment.css">
 <link rel="stylesheet" href="assets/ui/doc/fragment.css">
-<link rel="stylesheet" href="site.css?v=verlyn-20261123-9">
+<link rel="stylesheet" href="site.css?v=20261124-controls-1">
 <link rel="stylesheet" href="pages.css?v=verlyn-20261123-9">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script src="assets/backgrounds/backgrounds.js"></script>
-<link rel="stylesheet" href="workflow.css?v=verlyn-20261123-10">
+<link rel="stylesheet" href="workflow.css?v=20261124-laptop-1">
 
 <link rel="stylesheet" href="polish.css?v=20261123-14">
+<link rel="stylesheet" href="service-detail.css?v=20261125-3">
+<link rel="stylesheet" href="service-scenes.css?v=20261125-2">
 </head>
-<body>
+<body class="service-detail-page">
 <header class="nav" data-verlyn-nav>
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
-    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
     <nav class="nav__links" aria-label="Main">
       <div class="nav__item"><a class="nav__link" href="index.html">Home</a></div>
       <div class="nav__item">
@@ -131,28 +133,15 @@ html[data-theme="dark"] {
       <div class="wrap"><div class="hero-text feature-hero__layout">
         <div class="feature-hero__copy"><p class="scene-kicker">WORKFLOW AUTOMATION</p><h1 id="hero-h">Get repeat admin out of the way</h1>
           <p class="hero__lead">Connect documents, approvals and reports so work moves forward while your team handles exceptions.</p><div class="btn-row"><a class="btn btn--primary" href="contact.html#book">Book a pilot call</a><a class="btn btn--secondary" href="#get">What’s included</a></div></div>
-        <div class="feature-hero__media" data-enter-media><div class="service-scene scene--sand" data-scene>
-  <div class="scene-head"><p>Invoice match</p><span>Example</span></div>
-  
-<div class="invoice-review">
-  <div class="invoice-review__docs"><span><img src="assets/icons/pdf.svg" width="24" height="24" alt=""> <b>INV-2041</b></span><span><img src="assets/icons/google-sheets.svg" width="24" height="24" alt=""> <b>PO-319</b></span></div>
-  <table><thead><tr><th scope="col">Field</th><th scope="col">Invoice</th><th scope="col">Purchase order</th></tr></thead>
-    <tbody><tr><th scope="row">Supplier</th><td>Gulf Supplies</td><td>Gulf Supplies</td></tr><tr class="invoice-review__exception"><th scope="row">Total</th><td>AED 2,480</td><td>AED 2,400</td></tr></tbody></table>
-  <p class="invoice-result" data-scene-after hidden>AED 80 difference flagged for approval.</p>
-</div>
-  <button class="scene-button" type="button" data-scene-action data-reset="Reset invoice" aria-pressed="false">Check for differences</button>
-</div></div>
+        <div class="feature-hero__media" data-enter-media><div class="detail-preview automation-editor" data-detail-visual="automation" data-scene role="group" aria-label="Illustrative automation workflow: an email triggers extraction, a rule checks the amount, then updates a sheet or sends an approval request">
+<div class="automation-editor__bar"><b>Automation<span> / Invoice processing</span></b><small>Illustrative workflow</small></div><div class="automation-canvas"><svg viewBox="0 0 600 240" preserveAspectRatio="none" aria-hidden="true"><path d="M145 57H245M345 57H445M500 95V124Q500 140 480 140H320Q300 140 300 160M500 95V160"/></svg><div class="automation-node automation-node--mail"><span><img src="assets/icons/gmail.svg" width="26" height="26" alt=""></span><b>Email received</b><small>Trigger</small></div><div class="automation-node automation-node--extract"><span><img src="assets/icons/pdf.svg" width="26" height="26" alt=""></span><b>Extract fields</b><small>Read document</small></div><div class="automation-node automation-node--rule"><span>IF</span><b>Check amount</b><small>Condition</small></div><div class="automation-node automation-node--save"><span><img src="assets/icons/google-sheets.svg" width="26" height="26" alt=""></span><b>Update sheet</b><small>Matches order</small></div><div class="automation-node automation-node--review"><span><img src="assets/icons/ui-user.svg" width="26" height="26" alt=""></span><b>Ask finance</b><small>Needs approval</small></div></div><div class="automation-editor__foot"><span data-scene-before>Ready to test the workflow</span><span data-scene-after hidden>Checked · Finance review requested</span><button class="scene-button" type="button" data-scene-action data-reset="Reset example" aria-pressed="false">Run example <span aria-hidden="true">▶</span></button></div></div></div>
       </div></div>
     </section>
 
   <section class="section section--tight feature-delivery feature-delivery--invoice" id="get" aria-labelledby="get-h">
       <div class="wrap service-workflow-layout">
         <div class="service-workflow-copy"><h2 id="get-h">Start where manual work costs the most time</h2><ul class="delivery-points"><li data-beat style="--beat:0"><h3>Intake</h3><p>Read incoming invoices, purchase orders or quote requests.</p></li><li data-beat style="--beat:1"><h3>Check</h3><p>Match the data and flag anything that needs review.</p></li><li data-beat style="--beat:2"><h3>Hand off</h3><p>Route the exception with context, then report the outcome.</p></li></ul></div>
-        <div class="service-workflow-visual"><div class="workflow-demo workflow-invoice" role="group" aria-label="Invoice received → checked → routed"><div class="workflow-demo__head"><b>Invoice received → checked → routed</b></div>
-      <div class="workflow-documents"><span><img src="assets/icons/pdf.svg" alt="" width="24" height="24">INV-2041</span><span><img src="assets/icons/google-sheets.svg" alt="" width="24" height="24">PO-319</span></div>
-      <div class="workflow-match"><div><span>Invoice total</span><b>AED 2,480</b></div><div><span>Purchase order</span><b>AED 2,400</b></div></div>
-      <div class="workflow-exception"><b>AED 80 difference</b><small>Approval required before processing</small></div>
-      <div class="workflow-handoff"><img src="assets/icons/ui-user.svg" alt="" width="25" height="25"><span><b>Finance review queue</b><small>Invoice and purchase order attached</small></span></div></div></div>
+        <div class="service-workflow-visual"><div class="operations-queue" data-detail-visual="automation-queue"><div class="preview-top"><span>REVIEW QUEUE</span><span>Exceptions first</span></div><h3>The right work reaches the right person.</h3><div class="queue-record"><span class="queue-badge">!</span><span><b>Supplier invoice</b><small>Amount differs from the order</small></span><span>Finance</span></div><div class="queue-record"><span class="queue-badge queue-badge--done">✓</span><span><b>Delivery record</b><small>Required fields complete</small></span><span>Archive</span></div><details><summary>Inspect the review handoff</summary><p>Invoice, purchase order and the flagged field travel together. Your team makes the approval decision.</p></details></div></div>
       </div>
     </section>
 
@@ -180,7 +169,7 @@ html[data-theme="dark"] {
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
-          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
           <p class="footer__lede">Growth systems for UAE SMEs, from Abu Dhabi.</p>
         </div>
         <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="crm.html">CRM</a></li><li><a href="paid-ads.html">Paid ads</a></li><li><a href="agentic-ai.html">Agentic AI</a></li></ul></div>
@@ -199,6 +188,6 @@ html[data-theme="dark"] {
 <script type="module" src="assets/system.js?v=verlyn-20261123-9"></script>
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>
-<script type="module" src="site.js?v=20261123-14"></script>
+<script type="module" src="site.js?v=20261124-controls-1"></script>
 </body>
 </html>

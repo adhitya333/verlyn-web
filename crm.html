@@ -61,20 +61,22 @@ html[data-theme="dark"] {
 <link rel="stylesheet" href="assets/ui/chat/fragment.css">
 <link rel="stylesheet" href="assets/ui/toggles/fragment.css">
 <link rel="stylesheet" href="assets/ui/doc/fragment.css">
-<link rel="stylesheet" href="site.css?v=verlyn-20261123-9">
+<link rel="stylesheet" href="site.css?v=20261124-controls-1">
 <link rel="stylesheet" href="pages.css?v=verlyn-20261123-9">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script src="assets/backgrounds/backgrounds.js"></script>
-<link rel="stylesheet" href="workflow.css?v=verlyn-20261123-10">
+<link rel="stylesheet" href="workflow.css?v=20261124-laptop-1">
 
 <link rel="stylesheet" href="polish.css?v=20261123-14">
 <link rel="stylesheet" href="refinements.css?v=20261123-15">
+<link rel="stylesheet" href="service-detail.css?v=20261125-3">
+<link rel="stylesheet" href="service-scenes.css?v=20261125-2">
 </head>
-<body>
+<body class="service-detail-page">
 <header class="nav" data-verlyn-nav>
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
-    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
     <nav class="nav__links" aria-label="Main">
       <div class="nav__item"><a class="nav__link" href="index.html">Home</a></div>
       <div class="nav__item">
@@ -132,27 +134,21 @@ html[data-theme="dark"] {
       <div class="wrap"><div class="hero-text feature-hero__layout">
         <div class="feature-hero__copy"><p class="scene-kicker">CRM SETUP</p><h1 id="hero-h">See every lead from enquiry to booking</h1>
           <p class="hero__lead">Bring WhatsApp, Instagram, web and ad leads into one CRM with a clear owner and next action.</p><div class="btn-row"><a class="btn btn--primary" href="contact.html#book">Book a pilot call</a><a class="btn btn--secondary" href="#get">What’s included</a></div></div>
-        <div class="feature-hero__media" data-enter-media><div class="workflow-demo crm-dashboard" role="group" aria-label="Example CRM dashboard with lead totals, pipeline activity and follow-up queue">
-
- <div class="crm-dashboard__metrics"><div><small>Open leads</small><b>12</b></div><div><small>Follow-ups</small><b>5</b></div><div><small>Booked</small><b>8</b></div></div>
- <div class="crm-dashboard__chart"><div><b>Pipeline activity</b><span>Enquiries <i></i> Bookings</span></div><svg viewBox="0 0 360 90" role="img" aria-label="Illustrative enquiry and booking activity"><path class="crm-gridline" d="M0 18H360M0 45H360M0 72H360"/><path class="crm-chart-area" d="M0 75 36 63 72 68 108 46 144 53 180 30 216 39 252 18 288 25 324 12 360 8V90H0Z"/><path class="crm-chart-line" d="M0 75 36 63 72 68 108 46 144 53 180 30 216 39 252 18 288 25 324 12 360 8"/><path class="crm-chart-booked" d="M0 82 36 79 72 80 108 68 144 72 180 56 216 60 252 41 288 46 324 31 360 27"/></svg></div>
- <div class="crm-dashboard__queue"><span><i>FA</i><b>Fatima A.</b><small>Reem · follow-up</small></span><strong>Assigned</strong></div>
- </div></div>
+        <div class="feature-hero__media" data-enter-media><div class="detail-preview crm-overview" data-detail-visual="crm" role="img" aria-label="Illustrative CRM dashboard with lead metrics, sales activity, lead sources and a follow-up queue">
+<div class="crm-overview__bar"><b><span>C</span> Verlyn CRM</b><span>Dashboard <small>Example workspace</small></span><i aria-hidden="true">⌕</i></div>
+<div class="crm-overview__shell"><aside aria-hidden="true"><b>Overview</b><span>Leads</span><span>Messages</span><span>Calendar</span><span>Reports</span><span>Settings</span></aside><div class="crm-overview__body">
+<div class="crm-overview__title"><b>Sales overview</b><span>This week</span></div>
+<div class="crm-kpis"><span><small>New leads</small><b>24</b><i>Captured</i></span><span><small>Follow-ups</small><b>5</b><i>Due today</i></span><span><small>Bookings</small><b>8</b><i>Confirmed</i></span><span><small>Open tasks</small><b>4</b><i>Assigned</i></span></div>
+<div class="crm-overview__charts"><div class="crm-sales-chart"><b>Pipeline activity</b><svg viewBox="0 0 340 115" role="presentation"><path d="M0 25H340M0 60H340M0 95H340" stroke="#eee6df" fill="none"/><path d="M0 100 40 80 80 85 120 58 160 66 200 32 240 44 280 17 340 9V115H0Z" fill="#f6dfce"/><path d="M0 100 40 80 80 85 120 58 160 66 200 32 240 44 280 17 340 9" fill="none" stroke="#d48d62" stroke-width="3"/><path d="M0 108 60 99 120 89 180 93 240 70 290 75 340 52" fill="none" stroke="#9a89bd" stroke-width="2" stroke-dasharray="4 5"/></svg><div><span>Mon</span><span>Wed</span><span>Fri</span></div></div><div class="crm-source-chart"><b>Lead sources</b><span>Website<i style="--source:82%"></i></span><span>WhatsApp<i style="--source:64%"></i></span><span>Campaigns<i style="--source:47%"></i></span></div></div>
+<div class="crm-queue-title"><b>Recent enquiries</b><span>Next action</span></div><div class="crm-overview__lead"><i>MA</i><span><b>Maya A.</b><small>Website enquiry</small></span><span>Sales</span><strong>Follow up</strong></div><div class="crm-overview__lead"><i>OK</i><span><b>Omar K.</b><small>WhatsApp</small></span><span>Account team</span><strong>Visit booked</strong></div>
+</div></div></div></div>
       </div></div>
     </section>
 
   <section class="section section--tight feature-delivery feature-delivery--record" id="get" aria-labelledby="get-h">
       <div class="wrap service-workflow-layout">
         <div class="service-workflow-copy"><h2 id="get-h">The work your CRM takes on</h2><ul class="delivery-points"><li data-beat style="--beat:0"><h3>Capture</h3><p>Bring new enquiries into one list with their original source.</p></li><li data-beat style="--beat:1"><h3>Assign</h3><p>Set an owner and follow-up for each pipeline stage.</p></li><li data-beat style="--beat:2"><h3>Track</h3><p>See booked visits, overdue replies and lead status in one place.</p></li><li><h3>AI-assisted updates</h3><p>Capture enquiry details and suggest the next action. Staff review exceptions.</p></li></ul></div>
-        <div class="service-workflow-visual crm-workflow-stack"><div class="workflow-demo crm-workspace" role="group" aria-label="Example CRM workspace with dashboard metrics, activity chart and lead management table">
-<div class="crm-workspace__bar"><span><img src="assets/icons/ui-database.svg" width="21" height="21" alt=""> Verlyn CRM</span><small>Example workspace</small></div>
-<div class="crm-workspace__layout"><aside class="crm-workspace__side" aria-label="Workspace sections"><b>Overview</b><span>Leads</span><span>Follow-ups</span><span>Reports</span><span class="crm-workspace__ai"><img src="assets/icons/ui-bot.svg" width="18" height="18" alt=""> AI assistant</span></aside><div class="crm-workspace__main">
-
-<div class="crm-dashboard__metrics"><div><small>Open leads</small><b>12</b></div><div><small>Follow-ups</small><b>5</b></div><div><small>Booked</small><b>8</b></div></div>
-<div class="crm-dashboard__chart"><div><b>Enquiries to bookings</b><span>Example activity</span></div><svg viewBox="0 0 360 90" preserveAspectRatio="none" role="img" aria-label="Illustrative enquiry and booking trends"><path class="crm-gridline" d="M0 18H360M0 45H360M0 72H360"/><path class="crm-chart-area" d="M0 75 36 63 72 68 108 46 144 53 180 30 216 39 252 18 288 25 324 12 360 8V90H0Z"/><path class="crm-chart-line" d="M0 75 36 63 72 68 108 46 144 53 180 30 216 39 252 18 288 25 324 12 360 8"/><path class="crm-chart-booked" d="M0 82 36 79 72 80 108 68 144 72 180 56 216 60 252 41 288 46 324 31 360 27"/></svg></div>
-<table class="crm-leads-table"><caption>Lead queue</caption><thead><tr><th scope="col">Lead</th><th scope="col">Owner</th><th scope="col">Status</th></tr></thead><tbody><tr><td><b>Fatima A.</b><small>Website enquiry</small></td><td>Reem</td><td><span>Assigned</span></td></tr><tr><td><b>Omar K.</b><small>Social enquiry</small></td><td>Sales</td><td><span>Follow-up</span></td></tr><tr><td><b>Rahul M.</b><small>Ad enquiry</small></td><td>Reem</td><td><span>Booked</span></td></tr></tbody></table>
-<div class="crm-workspace__notice"><img src="assets/icons/ui-bot.svg" width="19" height="19" alt=""><span>AI captures enquiry details. Your team stays in control.</span></div>
-</div></div></div><div class="workflow-demo crm-ai-flow" role="group" aria-label="An enquiry passes through an AI assistant into the CRM and then to its owner"><div class="crm-ai-flow__head"><img src="assets/icons/ui-bot.svg" alt="" width="21" height="21"><b>AI connected to your CRM</b></div><div class="crm-ai-nodes"><div data-beat style="--beat:0"><img src="assets/icons/demo/ui-message-circle.svg" alt="" width="25" height="25"><b>Enquiry</b></div><div data-beat style="--beat:1"><img src="assets/icons/ui-bot.svg" alt="" width="25" height="25"><b>AI captures details</b></div><div data-beat style="--beat:2"><img src="assets/icons/ui-database.svg" alt="" width="25" height="25"><b>CRM updated</b></div><div data-beat style="--beat:3"><img src="assets/icons/ui-user.svg" alt="" width="25" height="25"><b>Owner notified</b></div></div><small>Agreed rules handle routine updates. Exceptions go to staff.</small></div></div>
+        <div class="service-workflow-visual"><div class="followup-planner" data-detail-visual="crm-planner"><div class="preview-top"><span>FOLLOW-UP PLANNER</span><span>Every contact has a next step</span></div><h3>A useful queue for your team.</h3><div class="followup-day"><span>Today</span><b>Next action</b></div><details open><summary><i>09:30</i><span>Consultation enquiry<small>Owner · Sales team</small></span><b>Reply</b></summary><p>The website enquiry and its source stay attached. Confirm the customer's preferred time.</p></details><details><summary><i>11:00</i><span>Proposal follow-up<small>Owner · Account team</small></span><b>Call</b></summary><p>Review the last conversation before following up on the proposal.</p></details><div class="planner-assist"><img src="assets/icons/ui-bot.svg" width="23" height="23" alt=""><span>AI captures the details.<br>Your team owns the relationship.</span></div></div></div>
       </div>
     </section>
 
@@ -180,7 +176,7 @@ html[data-theme="dark"] {
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
-          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
           <p class="footer__lede">Growth systems for UAE SMEs, from Abu Dhabi.</p>
         </div>
         <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="crm.html">CRM</a></li><li><a href="paid-ads.html">Paid ads</a></li><li><a href="agentic-ai.html">Agentic AI</a></li></ul></div>
@@ -199,6 +195,6 @@ html[data-theme="dark"] {
 <script type="module" src="assets/system.js?v=verlyn-20261123-9"></script>
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>
-<script type="module" src="site.js?v=20261123-14"></script>
+<script type="module" src="site.js?v=20261124-controls-1"></script>
 </body>
 </html>

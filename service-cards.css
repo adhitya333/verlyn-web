@@ -1,0 +1,102 @@
+/* Soft glass surfaces and raised previews keep the six services in one family. */
+#services.home-services > .wrap { display: block; }
+.home-service-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; }
+#services.home-services .card { display: grid; grid-template-rows: 54px 36px 278px 52px; padding: 0; gap: 0; border-radius: 22px; align-self: stretch; color: #20352e; border: 1px solid var(--scene-edge); background: radial-gradient(ellipse at 8% 0, #fffffff2, transparent 65%), linear-gradient(135deg, var(--scene-tint), color-mix(in srgb, var(--scene-tint) 75%, white)); box-shadow: inset 1px 2px 1px #fff, inset -1px -2px 2px #ffffffa6, 0 6px 0 color-mix(in srgb, var(--scene-edge) 70%, white), 0 9px 10px #243d320a, 0 19px 30px #243d3214; }
+#services.home-services .card > h3 { min-height: 0; margin: 0; padding: 19px 20px 0; font-size: 20px; line-height: 27px; text-wrap: nowrap; }
+#services.home-services .card > h3 a { display: flex; align-items: center; gap: 8px; color: #20352e; text-decoration: none; }
+#services.home-services .service-gallery__link > img { margin: 0; width: 23px; height: 23px; }
+#services.home-services .service-gallery__link::after { display: none; }
+#services.home-services .card > p { min-height: 0; max-width: none; padding: 0 20px 12px; margin: 0; font-size: 14px; line-height: 21px; color: #52685e; }
+.home-service-visual { display: flex; align-items: stretch; min-width: 0; margin: 0 12px; padding: 14px 12px; border-radius: 16px; background: radial-gradient(ellipse at 18% 0, #ffffffeb, transparent 70%), linear-gradient(145deg, var(--scene-tint), var(--scene-edge)); border: 1px solid #ffffffb3; box-shadow: inset 0 2px 8px #fff9, inset 0 -10px 26px #5477620a; }
+#services.home-services .home-service-visual .workflow-demo { width: 100%; min-height: 0; min-width: 0; padding: 13px; gap: 12px; border-radius: 13px; align-content: center; font-size: 14px; border-color: #ffffffdb; background: linear-gradient(135deg, #fffffff2, color-mix(in srgb, var(--scene-tint) 50%, white)); box-shadow: 0 5px 14px #2d443312, inset 0 1px 1px #fff; }
+#services .home-service-visual .workflow-demo__head > b { font-size: 14px; }
+#services .home-service-visual .workflow-pipeline { min-height: 120px; }
+#services .home-service-visual .workflow-lead { min-height: 65px; padding: 7px; top: 37px; gap: 4px; }
+#services .home-service-visual .workflow-lead strong { font-size: 12px; }
+.home-demo-note { display: flex; align-items: center; gap: 7px; color: #546d59; font-size: 12px; }
+.home-demo-note b { margin-left: auto; font-size: 11px; font-weight: 500; }
+#services .home-service-visual .workflow-ad-summary strong { font-size: 25px; }
+#services .home-service-visual .workflow-ad-summary small { font-size: 12px; }
+#services .home-service-visual .workflow-campaign { gap: 8px; }
+#services .home-service-visual .workflow-campaign > div > b { font-size: 13px; }
+#services .home-service-visual .workflow-campaign > strong { font-size: 22px; }
+#services .home-service-visual .workflow-outcome { padding-top: 8px; font-size: 12px; }
+#services .home-service-visual .workflow-request { padding: 10px; gap: 8px; }
+#services .home-service-visual .workflow-request > span { font-size: 13px; }
+#services .home-service-visual .workflow-answers { gap: 6px; }
+#services .home-service-visual .workflow-answers > div { padding: 11px 8px; gap: 4px; }
+#services .home-service-visual .workflow-answers b { font-size: 12px; }
+#services .home-service-visual .workflow-answers small { font-size: 11px; }
+#services .home-service-visual .workflow-handoff { padding: 10px; gap: 7px; }
+#services .home-service-visual .workflow-handoff b { font-size: 13px; }
+#services .home-service-visual .workflow-handoff small { font-size: 11px; }
+#services .home-service-visual .workflow-documents { flex-wrap: nowrap; padding-bottom: 8px; gap: 8px; }
+#services .home-service-visual .workflow-documents > span { font-size: 13px; }
+#services .home-service-visual .workflow-match { gap: 7px; }
+#services .home-service-visual .workflow-match > div { padding: 9px; font-size: 13px; }
+#services .home-service-visual .workflow-exception { padding: 10px; font-size: 13px; }
+#services.home-services .card > .review-demo-link { align-self: center; justify-self: start; padding: 0; margin: 0 20px; min-height: 44px; display: inline-flex; align-items: center; font-size: 14px; color: #20352e; }
+
+/* A miniature fictional homepage, built as a single website rather than a dashboard. */
+#services.home-services .workflow-page { padding: 0; overflow: hidden; }
+.sample-home { display: grid; grid-template-rows: 20px 34px 112px minmax(0, 1fr); height: 100%; min-height: 0; align-self: stretch; background: #fafbf7; color: #273e37; }
+.sample-home__bar { display: flex; align-items: center; gap: 4px; padding: 0 10px; border-bottom: 1px solid #dfe7df; background: #edf2ec; }
+.sample-home__bar i { width: 5px; height: 5px; border-radius: 50%; background: #adbdad; }
+.sample-home__bar span { margin: auto; padding-right: 23px; font-size: 10px; color: #52685e; }
+.sample-home__nav { display: flex; align-items: center; justify-content: space-between; padding: 6px 14px; }
+.sample-home__nav > b { font-size: 22px; line-height: 1; letter-spacing: -.06em; }
+.sample-home__nav b span { font-size: 9px; vertical-align: top; }
+.sample-home__nav > span { font-size: 9px; }
+.sample-home__hero { display: grid; justify-items: start; gap: 5px; padding: 4px 14px 10px; }
+.sample-home__hero > span:first-child { font-size: 8px; letter-spacing: .13em; }
+.sample-home__hero strong { font: 400 25px/.98 Georgia, serif; letter-spacing: -.045em; }
+.sample-home__cta { padding: 6px 9px; border-radius: 3px; background: #2c5244; color: #fff; font-size: 9px; }
+.sample-home > img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: center 58%; }
+
+.agent-network { position: relative; width: 100%; height: 190px; }
+.agent-network__wires { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke-width: 1.5; }
+.agent-network__rails { stroke: #cebfdf; }
+.agent-network__signals { stroke: #8865aa; stroke-linecap: round; }
+.agent-network__signals path { stroke-dasharray: 12 190; }
+.agent-tool, .agent-network__core { position: absolute; display: grid; place-items: center; gap: 5px; width: 76px; height: 64px; border: 1px solid #fff; border-radius: 13px; background: linear-gradient(145deg, #fff, #f1edf8); box-shadow: 0 3px 0 #dfd6ec, 0 6px 10px #65487e12; }
+.agent-tool b { font-size: 11px; font-weight: 500; }
+.agent-tool--chat { left: 7%; top: 7%; }
+.agent-tool--calendar { right: 7%; top: 7%; }
+.agent-tool--crm { left: 7%; bottom: 7%; }
+.agent-tool--email { right: 7%; bottom: 7%; }
+.agent-network__core { left: 50%; top: 50%; width: 70px; height: 74px; transform: translate(-50%, -50%); background: linear-gradient(145deg, #fff, #e4d5f3); box-shadow: 0 4px 0 #c7b3db, 0 10px 20px #765d9626; }
+.agent-network__core b { font-size: 12px; font-weight: 500; }
+.agent-network__status { text-align: center; color: #6a507c; font-size: 12px; }
+#services.home-services .workflow-agent { gap: 0; padding: 7px 5px 12px; }
+#services.home-services .workflow-qualify { position: relative; overflow: hidden; }
+#services.home-services .workflow-qualify::after { content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 30%; pointer-events: none; background: linear-gradient(90deg, transparent, #efb69728, transparent); opacity: 0; }
+#services.home-services .workflow-invoice .workflow-exception { transform-origin: 80% 50%; }
+.workflow-qualify.is-offscreen::after { animation-play-state: paused !important; }
+
+@media (prefers-reduced-motion: no-preference) {
+  #services .workflow-page.demo-looping .sample-home__hero { animation: sample-home-reveal 7s ease infinite; }
+  #services .workflow-page.demo-looping .sample-home > img { animation: sample-home-photo 7s ease infinite; }
+  #services .workflow-agent.demo-looping .agent-network__signals path { animation: agent-connect 5.6s linear infinite; animation-delay: calc(var(--phase) * .7s); }
+  #services .workflow-agent.demo-looping .agent-tool { animation: agent-tool-ready 5.6s ease infinite; animation-delay: calc(var(--phase) * .7s); }
+  #services .workflow-qualify.demo-looping::after { animation: qualify-scan 7.2s ease infinite; }
+  #services .workflow-qualify.demo-looping .workflow-handoff { animation: qualify-handoff 7.2s ease infinite; }
+  #services .workflow-invoice.demo-looping .workflow-documents > span:first-child { animation: invoice-match 7.2s ease infinite; }
+  #services .workflow-invoice.demo-looping .workflow-documents > span:last-child { animation: invoice-match 7.2s ease infinite reverse; }
+  #services .workflow-invoice.demo-looping .workflow-exception { animation: invoice-approval 7.2s ease infinite; }
+}
+@keyframes sample-home-reveal { 0%, 100% { opacity: .55; transform: translateY(5px); } 20%, 85% { opacity: 1; transform: translateY(0); } }
+@keyframes sample-home-photo { 0%, 100% { clip-path: inset(0 100% 0 0); } 30%, 88% { clip-path: inset(0); } }
+@keyframes agent-connect { from { stroke-dashoffset: 202; } to { stroke-dashoffset: 0; } }
+@keyframes agent-tool-ready { 0%, 12%, 65%, 100% { transform: translateY(0); } 25%, 45% { transform: translateY(-3px); box-shadow: 0 3px 0 #cfbde1, 0 0 14px #bea1dc66; } }
+@keyframes qualify-scan { 0%, 12% { transform: translateX(-100%); opacity: 0; } 20% { opacity: 1; } 65%, 100% { transform: translateX(440%); opacity: 0; } }
+@keyframes qualify-handoff { 0%, 35%, 100% { opacity: .45; transform: translateX(8px); } 52%, 90% { opacity: 1; transform: translateX(0); } }
+@keyframes invoice-match { 0%, 100% { transform: translateY(0); } 35%, 70% { transform: translateY(4px); } }
+@keyframes invoice-approval { 0%, 30%, 100% { opacity: .4; transform: scale(.94); } 46%, 88% { opacity: 1; transform: scale(1); } }
+
+
+.services-page main > .home-services { padding-block: 24px 48px; }
+.services-page main > .home-services > .wrap { display: block; }
+.services-page .home-services h2 { font-size: 32px; margin-bottom: 28px; }
+@media (min-width: 768px) and (max-width: 1150px) { .home-service-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; } }
+@media (max-width: 767px) { .home-service-grid { grid-template-columns: minmax(0,1fr); gap: 22px; } }
+@media (max-width: 359px) { #services.home-services .card > h3 { font-size: 18px; padding-inline: 16px; } #services.home-services .card > p { padding-inline: 16px; font-size: 13px; } .home-service-visual { padding: 9px; } }

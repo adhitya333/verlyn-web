@@ -61,19 +61,20 @@ html[data-theme="dark"] {
 <link rel="stylesheet" href="assets/ui/chat/fragment.css">
 <link rel="stylesheet" href="assets/ui/toggles/fragment.css">
 <link rel="stylesheet" href="assets/ui/doc/fragment.css">
-<link rel="stylesheet" href="site.css?v=verlyn-20261123-9">
+<link rel="stylesheet" href="site.css?v=20261124-controls-1">
 <link rel="stylesheet" href="pages.css?v=verlyn-20261123-9">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script src="assets/backgrounds/backgrounds.js"></script>
-<link rel="stylesheet" href="workflow.css?v=verlyn-20261123-10">
+<link rel="stylesheet" href="workflow.css?v=20261124-laptop-1">
 
 <link rel="stylesheet" href="polish.css?v=20261123-14">
+<link rel="stylesheet" href="service-detail.css?v=20261125-3">
 </head>
-<body>
+<body class="service-detail-page">
 <header class="nav" data-verlyn-nav>
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
-    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
     <nav class="nav__links" aria-label="Main">
       <div class="nav__item"><a class="nav__link" href="index.html">Home</a></div>
       <div class="nav__item">
@@ -131,26 +132,14 @@ html[data-theme="dark"] {
       <div class="wrap"><div class="hero-text feature-hero__layout">
         <div class="feature-hero__copy"><p class="scene-kicker">LEAD GENERATION</p><h1 id="hero-h">Turn more enquiries into sales conversations</h1>
           <p class="hero__lead">Capture and qualify UAE sales leads, then send your team the context they need to take over.</p><div class="btn-row"><a class="btn btn--primary" href="contact.html#book">Book a pilot call</a><a class="btn btn--secondary" href="#get">What’s included</a></div></div>
-        <div class="feature-hero__media" data-enter-media><div class="service-scene scene--peach" data-scene>
-  <div class="scene-head"><p>Qualify a property enquiry</p><span>Example</span></div>
-  
-<div class="lead-qualify">
-  <p class="lead-qualify__message"> “Looking for a two-bed in Al Reem.”</p>
-  <div class="lead-qualify__fields" data-scene-before><span>Budget <b>Ask</b></span><span>Move-in date <b>Ask</b></span><span>Broker <b>Pending</b></span></div>
-  <div class="lead-qualify__fields" data-scene-after hidden><span>Budget <b>AED 120k/year</b></span><span>Move-in date <b>March</b></span><span>Broker <b>Al Reem team</b></span></div>
-</div>
-  <button class="scene-button" type="button" data-scene-action data-reset="Reset enquiry" aria-pressed="false">Qualify the enquiry</button>
-</div></div>
+        <div class="feature-hero__media" data-enter-media><div class="detail-preview lead-brief" data-detail-visual="leads" role="group" aria-label="Interactive enquiry qualification brief"><div class="preview-top"><span>SALES BRIEF</span><span>04 / LEADS</span></div><div class="brief-message"><img src="assets/icons/whatsapp.svg" width="29" height="29" alt="WhatsApp"><p>“We’re looking for an office for our growing team.”</p></div><div class="brief-fields"><span><small>Team size</small><b>8–12 people</b></span><span><small>Location</small><b>Abu Dhabi</b></span></div><fieldset class="preview-switch"><legend>When does the customer need it?</legend><label><input type="radio" name="brief-timing" id="brief-now" checked> This month</label><label><input type="radio" name="brief-timing" id="brief-later"> Exploring</label></fieldset><div class="brief-route"><span aria-hidden="true">↳</span><div class="brief-now"><b>Ready for a sales conversation</b><small>Send the brief to the workspace team.</small></div><div class="brief-later"><b>Keep the conversation useful</b><small>Share options and agree on a follow-up.</small></div></div></div></div>
       </div></div>
     </section>
 
   <section class="section section--tight feature-delivery feature-delivery--qualify" id="get" aria-labelledby="get-h">
       <div class="wrap service-workflow-layout">
         <div class="service-workflow-copy"><h2 id="get-h">A useful handoff for sales</h2><ul class="delivery-points"><li data-beat style="--beat:0"><h3>Ask the right questions</h3><p>Confirm details such as budget, timing and fit over WhatsApp.</p></li><li data-beat style="--beat:1"><h3>Send the full context</h3><p>Score and tag the lead. Route it to the right person with its conversation attached.</p></li><li data-beat style="--beat:2"><h3>Respect customer consent</h3><p>Use consent-based outreach with a clear opt-out.</p></li></ul></div>
-        <div class="service-workflow-visual"><div class="workflow-demo workflow-qualify" role="group" aria-label="A sales brief, ready for handoff"><div class="workflow-demo__head"><b>A sales brief, ready for handoff</b></div>
-      <div class="workflow-request"><img src="assets/icons/ui-user.svg" alt="" width="24" height="24"><span>“Looking for a two-bed in Al Reem.”</span></div>
-      <div class="workflow-answers"><div style="--phase:0"><small>Budget</small><b>AED 120k / year</b></div><div style="--phase:1"><small>Move-in</small><b>March</b></div><div style="--phase:2"><small>Area</small><b>Al Reem</b></div></div>
-      <div class="workflow-handoff"><img src="assets/icons/ui-database.svg" alt="" width="25" height="25"><span><b>Al Reem sales queue</b><small>Brief and source attached</small></span><strong>Qualified</strong></div></div></div>
+        <div class="service-workflow-visual"><div class="routing-brief" data-detail-visual="lead-routing"><div class="preview-top"><span>HANDOFF NOTES</span><span>Context travels with the lead</span></div><div class="routing-brief__paper"><small>BUSINESS ENQUIRY</small><h3>Ready for the right conversation.</h3><dl><div><dt>Requirement</dt><dd>Team workspace</dd></div><div><dt>Fit</dt><dd>Location &amp; size confirmed</dd></div><div><dt>Next step</dt><dd>Arrange a consultation</dd></div></dl><details><summary>Open the qualification notes</summary><p>Original message, consent preference and timing are attached for the sales team to review.</p></details></div><div class="routing-recipient"><span aria-hidden="true">↳</span><img src="assets/icons/ui-user.svg" width="26" height="26" alt=""><span><b>Workspace sales team</b><small>Owner assigned · Follow-up agreed</small></span></div></div></div>
       </div>
     </section>
 
@@ -178,7 +167,7 @@ html[data-theme="dark"] {
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
-          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
           <p class="footer__lede">Growth systems for UAE SMEs, from Abu Dhabi.</p>
         </div>
         <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="crm.html">CRM</a></li><li><a href="paid-ads.html">Paid ads</a></li><li><a href="agentic-ai.html">Agentic AI</a></li></ul></div>
@@ -197,6 +186,6 @@ html[data-theme="dark"] {
 <script type="module" src="assets/system.js?v=verlyn-20261123-9"></script>
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>
-<script type="module" src="site.js?v=20261123-14"></script>
+<script type="module" src="site.js?v=20261124-controls-1"></script>
 </body>
 </html>

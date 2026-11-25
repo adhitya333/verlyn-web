@@ -62,19 +62,21 @@ html[data-theme="dark"] {
 <link rel="stylesheet" href="assets/ui/toggles/fragment.css">
 <link rel="stylesheet" href="assets/ui/doc/fragment.css">
 <link rel="stylesheet" href="assets/diagrams/diagram.css">
-<link rel="stylesheet" href="site.css?v=verlyn-20261123-9">
+<link rel="stylesheet" href="site.css?v=20261124-controls-1">
 <link rel="stylesheet" href="pages.css?v=verlyn-20261123-9">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script src="assets/backgrounds/backgrounds.js"></script>
-<link rel="stylesheet" href="workflow.css?v=verlyn-20261123-10">
+<link rel="stylesheet" href="workflow.css?v=20261124-laptop-1">
 
 <link rel="stylesheet" href="polish.css?v=20261123-14">
+<link rel="stylesheet" href="service-detail.css?v=20261125-3">
+<link rel="stylesheet" href="service-scenes.css?v=20261125-2">
 </head>
-<body>
+<body class="service-detail-page">
 <header class="nav" data-verlyn-nav>
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
-    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
     <nav class="nav__links" aria-label="Main">
       <div class="nav__item"><a class="nav__link" href="index.html">Home</a></div>
       <div class="nav__item">
@@ -130,26 +132,20 @@ html[data-theme="dark"] {
 <main id="top">
   <section class="hero feature-hero feature-hero--agent" data-enter aria-labelledby="hero-h">
       <div class="wrap"><div class="hero-text feature-hero__layout">
-        <div class="feature-hero__copy"><p class="scene-kicker">AI AGENTS</p><h1 id="hero-h">Give an AI agent one job to do well</h1>
-          <p class="hero__lead">Connect an agent to your business tools, define what it can do, and set the rules for when a person takes over.</p><div class="btn-row"><a class="btn btn--primary" href="contact.html#book">Book a pilot call</a><a class="btn btn--secondary" href="#get">What’s included</a></div></div>
-        <div class="feature-hero__media" data-enter-media><div class="service-scene scene--lilac" data-scene>
-  <div class="scene-head"><p>Watch an agent use its tools</p><span>Example</span></div>
-  <div class="scene-tabs" role="tablist" aria-label="Agent scenario"><button type="button" role="tab" id="agent-task-t0" aria-controls="agent-task-p0" aria-selected="true" tabindex="0">Book a visit</button>
-<button type="button" role="tab" id="agent-task-t1" aria-controls="agent-task-p1" aria-selected="false" tabindex="-1">Hand off to staff</button></div>
-<div class="scene-tab-panel" role="tabpanel" id="agent-task-p0" aria-labelledby="agent-task-t0"><ol class="agent-trace"><li><span><b>Read the request</b><small>Customer asks for Thursday</small></span><i aria-hidden="true">✓</i></li><li><img src="assets/icons/google-calendar.svg" width="20" height="20" alt=""><span><b>Check and reserve a slot</b><small>Thursday · 16:30 is free</small></span><i aria-hidden="true">✓</i></li><li><img src="assets/icons/ui-database.svg" width="20" height="20" alt=""><span><b>Update CRM</b><small>Save the booking and source</small></span><i aria-hidden="true">✓</i></li></ol><p class="agent-result">Booking confirmed to the customer.</p></div>
-<div class="scene-tab-panel" role="tabpanel" id="agent-task-p1" aria-labelledby="agent-task-t1" hidden><ol class="agent-trace"><li><span><b>Read the request</b><small>Customer asks for a refund</small></span><i aria-hidden="true">✓</i></li><li><img src="assets/icons/ui-bot.svg" width="20" height="20" alt=""><span><b>Check permission</b><small>Refund requires a person</small></span><i aria-hidden="true">✓</i></li><li><img src="assets/icons/ui-user.svg" width="20" height="20" alt=""><span><b>Notify staff</b><small>Attach the conversation to the handoff</small></span><i aria-hidden="true">✓</i></li></ol><p class="agent-result">Staff receive the request for review.</p></div>
-  
-</div></div>
+        <div class="feature-hero__copy"><p class="scene-kicker">AI AGENTS</p><h1 id="hero-h">AI agents that work together.</h1>
+          <p class="hero__lead">Give specialist agents a shared task, connect their tools, and keep your team in charge of the final action.</p><div class="btn-row"><a class="btn btn--primary" href="contact.html#book">Book a pilot call</a><a class="btn btn--secondary" href="#get">What’s included</a></div></div>
+        <div class="feature-hero__media" data-enter-media><div class="detail-preview agent-team" data-detail-visual="agent" data-motion-preview role="group" aria-label="Illustrative multi-agent orchestration: a coordinator delegates research, planning and writing, then a person reviews the result">
+<div class="preview-top"><span>MULTI-AGENT WORKSPACE</span><span>Illustrative task</span></div><div class="agent-team__task"><span>TASK</span><b>Prepare a customer follow-up</b><img src="assets/icons/demo/ui-message-circle.svg" width="23" height="23" alt=""></div>
+<div class="agent-coordinator"><img src="assets/icons/ui-bot.svg" width="28" height="28" alt=""><span><b>Coordinator agent</b><small>Delegate · Combine · Review</small></span><i aria-hidden="true"></i></div>
+<div class="agent-specialists"><div><span class="agent-specialists__icon">01</span><b>Research agent</b><small>Read CRM context</small><i aria-hidden="true"></i></div><div><span class="agent-specialists__icon">02</span><b>Planning agent</b><small>Choose the next step</small><i aria-hidden="true"></i></div><div><span class="agent-specialists__icon">03</span><b>Writing agent</b><small>Draft the response</small><i aria-hidden="true"></i></div></div>
+<details class="agent-team__result"><summary><img src="assets/icons/ui-user.svg" width="22" height="22" alt=""><span>Combined draft → Your review</span><span aria-hidden="true">↗</span></summary><p>“Thanks for your enquiry. Would you like to arrange a consultation this week?”</p></details><div class="agent-team__foot"><span>Specialists work together. You approve the result.</span><button type="button" data-preview-pause aria-pressed="false">Pause animation</button></div></div></div>
       </div></div>
     </section>
 
   <section class="section section--tight feature-delivery feature-delivery--agent" id="get" aria-labelledby="get-h">
       <div class="wrap service-workflow-layout">
         <div class="service-workflow-copy"><h2 id="get-h">A clear boundary for every action</h2><ul class="delivery-points"><li data-beat style="--beat:0"><h3>Choose the task</h3><p>Start with appointment booking, lead qualification or another well-defined job.</p></li><li data-beat style="--beat:1"><h3>Test real scenarios</h3><p>Try expected, edge-case and handoff requests before going live.</p></li><li data-beat style="--beat:2"><h3>Set approval rules</h3><p>Send requests involving money or uncertain decisions to staff.</p></li></ul></div>
-        <div class="service-workflow-visual"><div class="workflow-demo workflow-agent" role="group" aria-label="An agent completes the booking"><div class="workflow-demo__head"><b>An agent completes the booking</b></div>
-      <div class="workflow-request"><img src="assets/icons/whatsapp.svg" alt="" width="24" height="24"><span>“Is there a Thursday appointment?”</span></div>
-      <ol class="workflow-actions"><li style="--phase:0"><img src="assets/icons/google-calendar.svg" alt="" width="25" height="25"><span><b>Read availability</b><small>Thursday · 16:30 is open</small></span><i>✓</i></li><li style="--phase:1"><img src="assets/icons/ui-bot.svg" alt="" width="25" height="25"><span><b>Reserve the slot</b><small>Confirm the agreed time</small></span><i>✓</i></li><li style="--phase:2"><img src="assets/icons/ui-database.svg" alt="" width="25" height="25"><span><b>Update the CRM</b><small>Save the booking against the lead</small></span><i>✓</i></li></ol>
-      <div class="workflow-outcome">Exceptions go to staff with the conversation attached</div></div></div>
+        <div class="service-workflow-visual"><div class="permission-ledger" data-detail-visual="agent-permissions"><div class="preview-top"><span>TOOL ACCESS</span><span>Defined before launch</span></div><h3>A small job. Clear permissions.</h3><dl><div><dt>Calendar</dt><dd>Read availability · Create booking</dd></div><div><dt>CRM</dt><dd>Update the assigned contact</dd></div><div><dt>Payments</dt><dd class="permission-denied">Staff approval required</dd></div></dl><details><summary>What happens at the boundary?</summary><p>The agent stops the action and sends the request to your team with its conversation attached.</p></details></div></div>
       </div>
     </section>
 
@@ -177,7 +173,7 @@ html[data-theme="dark"] {
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
-          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
           <p class="footer__lede">Growth systems for UAE SMEs, from Abu Dhabi.</p>
         </div>
         <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="crm.html">CRM</a></li><li><a href="paid-ads.html">Paid ads</a></li><li><a href="agentic-ai.html">Agentic AI</a></li></ul></div>
@@ -197,6 +193,6 @@ html[data-theme="dark"] {
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>
 <script type="module" src="assets/diagrams/mount.js"></script>
-<script type="module" src="site.js?v=20261123-14"></script>
+<script type="module" src="site.js?v=20261124-controls-1"></script>
 </body>
 </html>

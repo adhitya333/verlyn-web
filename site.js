@@ -19,10 +19,10 @@ function apply(theme, save) {
 apply(html.dataset.theme === 'dark' ? 'dark' : 'light', false);
 document.addEventListener('click', e => {
   if (!e.target.closest('[data-theme-toggle]')) return;
-  html.classList.add('theme-fade');
   apply(html.dataset.theme === 'dark' ? 'light' : 'dark', true);
-  setTimeout(() => html.classList.remove('theme-fade'), 350);
 });
+
+document.querySelectorAll('[data-picker]').forEach(picker);
 
 // Old shared links continue to reach the page that now owns the comparison.
 if (location.pathname.endsWith('/') || location.pathname.endsWith('/index.html')) {
@@ -164,6 +164,7 @@ function picker(root) {
       t.setAttribute('aria-selected', String(on));
       t.tabIndex = on ? 0 : -1;
       panels[k].classList.toggle('is-active', on);
+      panels[k].hidden = !on;
       panels[k].toggleAttribute('inert', !on);
       panels[k].setAttribute('aria-hidden', String(!on));
     });
@@ -190,8 +191,6 @@ function picker(root) {
   if (root.classList.contains('ind')) window.addEventListener('hashchange', jumpToIndustry);
   if (!jumpToIndustry()) show(i);
 }
-document.querySelectorAll('[data-picker]').forEach(picker);
-
 // A short entrance, once per section. Demo loops remain independent.
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
   const entrances = new IntersectionObserver(entries => {
@@ -201,7 +200,7 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
       entrances.unobserve(target);
     }
   }, { threshold: .03, rootMargin: '0px 0px 24px 0px' });
-  document.querySelectorAll('main > section:not(.hero) > .wrap').forEach(section => {
+  document.querySelectorAll('body:not(.home-page) main > section:not(.hero) > .wrap').forEach(section => {
     if (section.getBoundingClientRect().top < innerHeight) return;
     section.classList.add('reveal-ready');
     entrances.observe(section);
@@ -229,9 +228,18 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
       target.classList.add('demo-looping');
       target.classList.toggle('is-offscreen', !isIntersecting);
     }
-  }, { threshold: 0, rootMargin: '80px 0px' });
-  document.querySelectorAll('.industry-example, .overview-demo, .flow, .workflow-demo, .journey-visual').forEach(demo => demos.observe(demo));
+  }, { threshold: 0, rootMargin: '0px' });
+  document.querySelectorAll('.industry-example, .overview-demo, .flow, .workflow-demo, .journey-visual, [data-motion-preview]').forEach(demo => demos.observe(demo));
 }
+
+document.querySelectorAll('[data-preview-pause]').forEach(button => {
+  button.addEventListener('click', () => {
+    const paused = button.getAttribute('aria-pressed') !== 'true';
+    button.setAttribute('aria-pressed', String(paused));
+    button.textContent = paused ? 'Play animation' : 'Pause animation';
+    button.closest('[data-motion-preview]').classList.toggle('is-preview-paused', paused);
+  });
+});
 
 // Preserve loop progress at viewport boundaries and pause in background tabs.
 const syncMotionVisibility = () => html.classList.toggle('motion-paused', document.hidden);

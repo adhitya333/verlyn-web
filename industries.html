@@ -54,15 +54,16 @@ html[data-theme="dark"] {
 </style>
 <link rel="stylesheet" href="assets/ui/base.css">
 <link rel="stylesheet" href="assets/ui/checklist/fragment.css">
-<link rel="stylesheet" href="site.css?v=verlyn-20261123-9">
+<link rel="stylesheet" href="site.css?v=20261124-controls-1">
 <link rel="stylesheet" href="pages.css?v=verlyn-20261123-9">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script src="assets/backgrounds/backgrounds.js"></script>
 <link rel="stylesheet" href="workflow.css?v=verlyn-20261123-10">
 
 <link rel="stylesheet" href="polish.css?v=20261123-14">
+<link rel="stylesheet" href="industry-previews.css?v=20261124-2">
 </head>
-<body>
+<body class="industry-examples-page">
 <header class="nav" data-verlyn-nav>
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
@@ -144,41 +145,43 @@ html[data-theme="dark"] {
         </div>
         <div class="picker__panels">
           <div role="tabpanel" id="p-clinics" aria-labelledby="clinics">
-<div class="industry-workflow"><p class="industry-service-label">AI appointment booking</p><div class="workflow-demo workflow-agent" role="group" aria-label="An agent completes the booking"><div class="workflow-demo__head"><b>An agent completes the booking</b></div>
-      <div class="workflow-request"><img src="assets/icons/whatsapp.svg" alt="" width="24" height="24"><span>“Is there a Thursday appointment?”</span></div>
-      <ol class="workflow-actions"><li style="--phase:0"><img src="assets/icons/google-calendar.svg" alt="" width="25" height="25"><span><b>Read availability</b><small>Thursday · 16:30 is open</small></span><i>✓</i></li><li style="--phase:1"><img src="assets/icons/ui-bot.svg" alt="" width="25" height="25"><span><b>Reserve the slot</b><small>Confirm the agreed time</small></span><i>✓</i></li><li style="--phase:2"><img src="assets/icons/ui-database.svg" alt="" width="25" height="25"><span><b>Update the CRM</b><small>Save the booking against the lead</small></span><i>✓</i></li></ol>
-      <div class="workflow-outcome">Exceptions go to staff with the conversation attached</div></div><a class="link" href="agentic-ai.html">Explore this service</a></div>
+<div class="industry-workflow"><p class="industry-service-label">AI appointment booking</p><div data-industry-example="clinic" class="industry-clinic industry-preview" role="group" aria-label="Clinic appointment calendar preview">
+  <div class="industry-preview__head"><b>Clinic appointments</b><span>Booking preview</span></div>
+  <div class="clinic-week" aria-hidden="true"><span>Mon<b>23</b></span><span>Tue<b>24</b></span><span>Wed<b>25</b></span><span class="clinic-week__day">Thu<b>26</b></span><span>Fri<b>27</b></span></div>
+  <fieldset class="clinic-slots"><legend>Choose an available time</legend><label><input type="radio" name="clinic-slot" id="clinic-thu" checked>Thu · 16:30</label><label><input type="radio" name="clinic-slot" id="clinic-fri">Fri · 10:00</label></fieldset>
+  <div class="clinic-selection"><img src="assets/icons/google-calendar.svg" alt="" width="30" height="30" loading="lazy"><span class="clinic-selection__thu"><b>Thursday, 16:30</b><small>Appointment selected</small></span><span class="clinic-selection__fri"><b>Friday, 10:00</b><small>Appointment selected</small></span></div>
+  <p class="industry-preview__note">Booking details stay with the patient enquiry.</p>
+</div><a class="link" href="agentic-ai.html">See this service</a></div>
           </div>
           <div role="tabpanel" id="p-realestate" aria-labelledby="realestate">
-<div class="industry-workflow"><p class="industry-service-label">CRM lead management</p><div class="workflow-demo workflow-crm" role="group" aria-label="One enquiry, through the CRM"><div class="workflow-demo__head"><b>One enquiry, through the CRM</b></div>
-      <div class="workflow-pipeline">
-        <div><b>New</b></div><div><b>Assigned</b></div><div><b>Booked</b></div>
-        <div class="workflow-lead"><span class="workflow-avatar">M</span><strong>Maya R.</strong><small>2-bed · Al Reem</small></div>
-      </div>
-      <div class="workflow-detail"><span><img src="assets/icons/ui-user.svg" alt="" width="22" height="22"><small>Lead owner</small><b>Karim</b></span><span><img src="assets/icons/google-calendar.svg" alt="" width="22" height="22"><small>Next appointment</small><b>Viewing · Sat 11:00</b></span></div>
-      <div class="workflow-outcome"><img src="assets/icons/ui-database.svg" alt="" width="18" height="18">Lead record, owner and appointment stay connected</div></div><a class="link" href="crm.html">Explore this service</a></div>
+<div class="industry-workflow"><p class="industry-service-label">CRM lead management</p><div data-industry-example="property" class="industry-property industry-preview" role="group" aria-label="Property enquiry records preview">
+  <div class="industry-preview__head"><b>Property enquiries</b><span>Open a record</span></div>
+  <details class="property-record" open><summary><span class="property-building" aria-hidden="true">▥</span><span><b>Al Reem · two-bedroom</b><small>Viewing requested</small></span></summary><dl><div><dt>Source</dt><dd>Website enquiry</dd></div><div><dt>Assigned to</dt><dd>Property team</dd></div><div><dt>Next action</dt><dd>Arrange a viewing</dd></div></dl></details>
+  <details class="property-record"><summary><span class="property-building property-building--sand" aria-hidden="true">▤</span><span><b>Saadiyat · apartment</b><small>Requirements received</small></span></summary><dl><div><dt>Source</dt><dd>WhatsApp</dd></div><div><dt>Assigned to</dt><dd>Sales team</dd></div><div><dt>Next action</dt><dd>Confirm budget and timing</dd></div></dl></details>
+</div><a class="link" href="crm.html">See this service</a></div>
           </div>
           <div role="tabpanel" id="p-fnb" aria-labelledby="fnb">
-<div class="industry-workflow"><p class="industry-service-label">Paid ads for restaurant reservations</p><div class="workflow-demo workflow-ads" role="group" aria-label="Track campaigns through to reservations"><div class="workflow-demo__head"><b>Track campaigns through to reservations</b></div>
-      <div class="workflow-ad-summary"><span><small>Sample ad spend</small><strong>AED 600</strong></span><span><small>Cost per reservation</small><strong>AED 75</strong></span></div>
-      <div class="workflow-campaign"><img src="assets/icons/google-ads.svg" alt="" width="25" height="25"><div><b>Search campaign</b><small>AED 240 spend</small><span class="workflow-ad-track"><i style="--ad-width:60%"></i></span></div><strong>3<small>reservations</small></strong></div>
-      <div class="workflow-campaign"><img src="assets/icons/meta.svg" alt="" width="25" height="25"><div><b>Social campaign</b><small>AED 360 spend</small><span class="workflow-ad-track"><i style="--ad-width:100%"></i></span></div><strong>5<small>reservations</small></strong></div>
-      <div class="workflow-outcome"><img src="assets/icons/ui-database.svg" alt="" width="18" height="18">8 reservations linked to their original campaigns</div></div><a class="link" href="paid-ads.html">Explore this service</a></div>
+<div class="industry-workflow"><p class="industry-service-label">Paid ads for restaurant reservations</p><div data-industry-example="restaurant-ads" class="industry-restaurant industry-preview" role="group" aria-label="Restaurant advertisement and reservation handoff preview">
+  <div class="industry-preview__head"><b>From the feed to a table</b><img src="assets/icons/meta.svg" alt="Meta" width="28" height="28" loading="lazy"></div>
+  <div class="restaurant-poster"><small>Friday supper</small><strong>A table for<br>your evening.</strong><svg viewBox="0 0 180 160" aria-hidden="true"><ellipse cx="90" cy="135" rx="67" ry="10" fill="#24392e18"/><circle cx="90" cy="79" r="65" fill="#f5efe0"/><circle cx="90" cy="79" r="48" fill="#e3d7b7"/><path d="M62 51q42-20 55 29t-50 28q-30-24-5-57" fill="#d58b5d"/><path d="m74 69 21-21 12 19-16 17zm-19 22 24-7 5 20-20 6zm49 2 19-5 3 19-21 4z" fill="#587454"/></svg><span>Seasonal plates. Good company.</span></div>
+  <details class="restaurant-reservation"><summary>Preview reservation handoff</summary><div class="restaurant-ticket"><div class="restaurant-tables" aria-label="Table 2 highlighted"><i>1</i><i class="is-requested">2</i><i>3</i><i>4</i></div><p><b>Two guests · 19:30</b><span>Source: Meta campaign</span><small>Request ready for staff confirmation</small></p></div></details>
+</div><a class="link" href="paid-ads.html">See this service</a></div>
           </div>
           <div role="tabpanel" id="p-logistics" aria-labelledby="logistics">
-<div class="industry-workflow"><p class="industry-service-label">Document checks and approval routing</p><div class="workflow-demo workflow-invoice" role="group" aria-label="Invoice received → checked → routed"><div class="workflow-demo__head"><b>Invoice received → checked → routed</b></div>
-      <div class="workflow-documents"><span><img src="assets/icons/pdf.svg" alt="" width="24" height="24">INV-2041</span><span><img src="assets/icons/google-sheets.svg" alt="" width="24" height="24">PO-319</span></div>
-      <div class="workflow-match"><div><span>Invoice total</span><b>AED 2,480</b></div><div><span>Purchase order</span><b>AED 2,400</b></div></div>
-      <div class="workflow-exception"><b>AED 80 difference</b><small>Approval required before processing</small></div>
-      <div class="workflow-handoff"><img src="assets/icons/ui-user.svg" alt="" width="25" height="25"><span><b>Finance review queue</b><small>Invoice and purchase order attached</small></span></div></div><a class="link" href="ai-automation.html">Explore this service</a></div>
+<div class="industry-workflow"><p class="industry-service-label">Document checks and approval routing</p><div data-industry-example="shipment" class="industry-shipment industry-preview" role="group" aria-label="Shipment document exception preview">
+  <div class="industry-preview__head"><b>Dispatch paperwork</b><span>Document check</span></div>
+  <div class="manifest-title"><span aria-hidden="true">▧</span><div><b>Export delivery</b><small>Check the shipment file</small></div></div>
+  <ul class="manifest-files"><li><span>Commercial invoice</span><b>Received</b></li><li><span>Delivery note</span><b>Received</b></li><li class="manifest-files__missing"><span>Packing list</span><b>Missing</b></li></ul>
+  <details class="manifest-exception"><summary>See exception route</summary><div><img src="assets/icons/ui-user.svg" alt="" width="27" height="27" loading="lazy"><span><b>Operations review</b><small>The missing document is flagged before dispatch.</small></span></div></details>
+</div><a class="link" href="ai-automation.html">See this service</a></div>
           </div>
           <div role="tabpanel" id="p-salons" aria-labelledby="salons">
-<div class="industry-workflow"><p class="industry-service-label">Landing pages and local search</p><div class="workflow-demo workflow-page" role="group" aria-label="Search to enquiry"><div class="workflow-demo__head"><b>Search to enquiry</b></div><div class="workflow-route"><span><img src="assets/icons/google-search-console.svg" alt="" width="18" height="18">Search</span><i aria-hidden="true">→</i><span><img src="assets/icons/demo/ui-globe.svg" alt="" width="18" height="18">EN / AR page</span><i aria-hidden="true">→</i><span><img src="assets/icons/ui-database.svg" alt="" width="18" height="18">Enquiry</span></div>
-      <div class="workflow-browser" data-workflow-page>
-        <div class="workflow-browser__bar"><span>Your business</span><div role="group" aria-label="Preview language"><button type="button" data-workflow-language="en" aria-pressed="true">EN</button><button type="button" data-workflow-language="ar" aria-pressed="false">AR</button></div></div>
-        <img class="workflow-page-art" src="assets/img/landing-business-ai.webp" alt="AI-generated Abu Dhabi waterfront architecture for a sample business landing page" width="900" height="600" loading="lazy" decoding="async"><div class="workflow-page-copy"><strong data-page-en>Book a salon visit</strong><strong data-page-ar lang="ar" dir="rtl" hidden>احجزي موعدك القادم</strong><button type="button" data-workflow-enquiry>Enquire <span aria-hidden="true">↗</span></button></div>
-      </div>
-      <div class="workflow-capture" role="status" data-workflow-result><img src="assets/icons/google-analytics.svg" alt="" width="18" height="18">Source tracked</div></div><a class="link" href="landing-pages.html">Explore this service</a></div>
+<div class="industry-workflow"><p class="industry-service-label">Landing pages and local search</p><div data-industry-example="salon-home" class="industry-salon industry-preview" role="group" aria-label="Fictional salon homepage with treatment previews">
+  <div class="salon-site__nav"><b>STUDIO</b><span>Beauty &amp; wellbeing</span></div>
+  <fieldset class="salon-site__switch"><legend>Preview a treatment page</legend><label><input type="radio" name="salon-preview" id="salon-hair" checked>Hair</label><label><input type="radio" name="salon-preview" id="salon-wellness">Wellness</label></fieldset>
+  <div class="salon-site__hero"><div><small>A little time for you</small><strong class="salon-site__hair">A fresh cut.<br>A fresh feeling.</strong><strong class="salon-site__wellness">Make room<br>to unwind.</strong></div><div class="salon-site__objects" aria-hidden="true"><i></i><i></i><span></span></div></div>
+  <details class="salon-treatments"><summary>View treatments</summary><p>Hair consultation · Wellness session</p></details>
+</div><a class="link" href="landing-pages.html">See this service</a></div>
           </div>
         </div>
       </div>
@@ -224,6 +227,6 @@ html[data-theme="dark"] {
 <script type="module" src="assets/system.js?v=verlyn-20261123-9"></script>
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>
-<script type="module" src="site.js?v=20261123-14"></script>
+<script type="module" src="site.js?v=20261124-controls-1"></script>
 </body>
 </html>

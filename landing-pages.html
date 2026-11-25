@@ -62,19 +62,20 @@ html[data-theme="dark"] {
 <link rel="stylesheet" href="assets/ui/chat/fragment.css">
 <link rel="stylesheet" href="assets/ui/toggles/fragment.css">
 <link rel="stylesheet" href="assets/ui/doc/fragment.css">
-<link rel="stylesheet" href="site.css?v=verlyn-20261123-9">
+<link rel="stylesheet" href="site.css?v=20261124-controls-1">
 <link rel="stylesheet" href="pages.css?v=verlyn-20261123-9">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script src="assets/backgrounds/backgrounds.js"></script>
-<link rel="stylesheet" href="workflow.css?v=verlyn-20261123-10">
+<link rel="stylesheet" href="workflow.css?v=20261124-laptop-1">
 
 <link rel="stylesheet" href="polish.css?v=20261123-14">
+<link rel="stylesheet" href="service-detail.css?v=20261125-3">
 </head>
-<body>
+<body class="service-detail-page">
 <header class="nav" data-verlyn-nav>
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
-    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
     <nav class="nav__links" aria-label="Main">
       <div class="nav__item"><a class="nav__link" href="index.html">Home</a></div>
       <div class="nav__item">
@@ -132,34 +133,14 @@ html[data-theme="dark"] {
       <div class="wrap"><div class="hero-text feature-hero__layout">
         <div class="feature-hero__copy"><p class="scene-kicker">LANDING PAGES &amp; SEO</p><h1 id="hero-h">Landing pages that work in Arabic and English</h1>
           <p class="hero__lead">Build fast bilingual pages with local SEO, conversion tracking and a clear path from search to WhatsApp.</p><div class="btn-row"><a class="btn btn--primary" href="contact.html#book">Book a pilot call</a><a class="btn btn--secondary" href="#get">What’s included</a></div></div>
-        <div class="feature-hero__media" data-enter-media><div class="service-scene scene--sea" data-scene>
-  <div class="scene-head"><p>Bilingual landing page</p><span>Example</span></div>
-  <div class="scene-tabs" role="tablist" aria-label="Preview language"><button type="button" role="tab" id="locale-t0" aria-controls="locale-p0" aria-selected="true" tabindex="0">English</button>
-<button type="button" role="tab" id="locale-t1" aria-controls="locale-p1" aria-selected="false" tabindex="-1"><span lang="ar">العربية</span></button></div>
-<div class="scene-tab-panel" role="tabpanel" id="locale-p0" aria-labelledby="locale-t0"><div class="mock-site" lang="en" dir="ltr">
-      <p class="mock-site__brand"><span aria-hidden="true">✳</span> Example dental clinic</p>
-      <div class="mock-site__copy"><b>Book a dental cleaning</b><p>View available appointments in Abu Dhabi.</p><button class="scene-button" type="button" data-demo-track="WhatsApp click tracked in the demo.">Try the WhatsApp button </button><p role="status" class="mock-site__result"></p></div>
-      <div class="mock-site__art" aria-hidden="true"><i></i><i></i><i></i></div>
-    </div></div>
-<div class="scene-tab-panel" role="tabpanel" id="locale-p1" aria-labelledby="locale-t1" hidden><div class="mock-site" lang="ar" dir="rtl">
-      <p class="mock-site__brand"><span aria-hidden="true">✳</span> عيادة أسنان تجريبية</p>
-      <div class="mock-site__copy"><b>احجز موعد تنظيف الأسنان</b><p>اطّلع على المواعيد المتاحة في أبوظبي.</p><button class="scene-button" type="button" data-demo-track="تم تتبّع نقرة واتساب في العرض التجريبي.">جرّب زر واتساب </button><p role="status" class="mock-site__result"></p></div>
-      <div class="mock-site__art" aria-hidden="true"><i></i><i></i><i></i></div>
-    </div></div>
-  
-</div></div>
+        <div class="feature-hero__media" data-enter-media><div class="detail-preview forma-site" data-detail-visual="landing" role="group" aria-label="Fictional Forma interiors homepage with English and Arabic previews"><div class="forma-nav"><b>forma.</b><span>Objects &nbsp; Spaces &nbsp; Studio</span></div><fieldset class="preview-switch"><legend>Homepage language</legend><label><input type="radio" name="forma-lang" id="forma-en" checked> EN</label><label><input type="radio" name="forma-lang" id="forma-ar"> العربية</label></fieldset><div class="forma-hero"><div class="forma-copy forma-en"><small>MADE FOR EVERYDAY LIVING</small><strong>A softer place<br>to land.</strong><span>Considered interiors. Natural materials.</span></div><div class="forma-copy forma-ar" lang="ar" dir="rtl"><small>تصاميم للحياة اليومية</small><strong>مساحة تشبهك.</strong><span>تصاميم مدروسة ومواد طبيعية.</span></div><div class="forma-chair" aria-hidden="true"><i></i><b></b><span></span></div></div><a class="forma-cta" href="contact.html#book"><span class="forma-en">Start your space ↗</span><span class="forma-ar" lang="ar">ابدأ تصميم مساحتك ↗</span></a><div class="forma-foot">Abu Dhabi &nbsp; / &nbsp; Interiors for living</div></div></div>
       </div></div>
     </section>
 
   <section class="section section--tight feature-delivery feature-delivery--studio" id="get" aria-labelledby="get-h">
       <div class="wrap service-workflow-layout">
         <div class="service-workflow-copy"><h2 id="get-h">Built around the enquiry</h2><ul class="delivery-points"><li data-beat style="--beat:0"><h3>Bilingual by design</h3><p>Arabic and English copy, plus a layout that reads correctly in both directions.</p></li><li data-beat style="--beat:1"><h3>Local search</h3><p>Location-specific service content and a Google Business Profile connection.</p></li><li data-beat style="--beat:2"><h3>Measured enquiries</h3><p>Connect WhatsApp clicks and form submissions to their traffic source.</p></li></ul></div>
-        <div class="service-workflow-visual"><div class="workflow-demo workflow-page" role="group" aria-label="Search to enquiry"><div class="workflow-demo__head"><b>Search to enquiry</b></div><div class="workflow-route"><span><img src="assets/icons/google-search-console.svg" alt="" width="18" height="18">Search</span><i aria-hidden="true">→</i><span><img src="assets/icons/demo/ui-globe.svg" alt="" width="18" height="18">EN / AR page</span><i aria-hidden="true">→</i><span><img src="assets/icons/ui-database.svg" alt="" width="18" height="18">Enquiry</span></div>
-      <div class="workflow-browser" data-workflow-page>
-        <div class="workflow-browser__bar"><span>Your business</span><div role="group" aria-label="Preview language"><button type="button" data-workflow-language="en" aria-pressed="true">EN</button><button type="button" data-workflow-language="ar" aria-pressed="false">AR</button></div></div>
-        <img class="workflow-page-art" src="assets/img/landing-business-ai.webp" alt="AI-generated Abu Dhabi waterfront architecture for a sample business landing page" width="900" height="600" loading="lazy" decoding="async"><div class="workflow-page-copy"><strong data-page-en>Book a visit</strong><strong data-page-ar lang="ar" dir="rtl" hidden>احجز موعدك</strong><button type="button" data-workflow-enquiry>Enquire <span aria-hidden="true">↗</span></button></div>
-      </div>
-      <div class="workflow-capture" role="status" data-workflow-result><img src="assets/icons/google-analytics.svg" alt="" width="18" height="18">Source tracked</div></div></div>
+        <div class="service-workflow-visual"><div class="local-discovery" data-detail-visual="local-search"><div class="preview-top"><span>LOCAL DISCOVERY</span><span>Search → your website</span></div><div class="local-search-box">interior design studio abu dhabi <span aria-hidden="true">⌕</span></div><div class="local-map" aria-hidden="true"><i></i><i></i><i></i><span>F</span></div><div class="local-business"><span class="local-business__mark">f.</span><span><b>Forma interiors</b><small>Interior design studio · Abu Dhabi</small></span></div><details><summary>See the enquiry path <span aria-hidden="true">↗</span></summary><p>A location-specific result leads to a bilingual page. WhatsApp clicks and form enquiries keep their search source.</p></details></div></div>
       </div>
     </section>
 
@@ -187,7 +168,7 @@ html[data-theme="dark"] {
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
-          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
           <p class="footer__lede">Growth systems for UAE SMEs, from Abu Dhabi.</p>
         </div>
         <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="crm.html">CRM</a></li><li><a href="paid-ads.html">Paid ads</a></li><li><a href="agentic-ai.html">Agentic AI</a></li></ul></div>
@@ -206,6 +187,6 @@ html[data-theme="dark"] {
 <script type="module" src="assets/system.js?v=verlyn-20261123-9"></script>
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>
-<script type="module" src="site.js?v=20261123-14"></script>
+<script type="module" src="site.js?v=20261124-controls-1"></script>
 </body>
 </html>

@@ -8,13 +8,16 @@
 }
 .showcase-orbit { position: absolute; left: 50%; top: 58%; width: 700px; height: 700px; border: 1px solid #e1e9df; border-radius: 50%; transform: translate(-50%, -25%); pointer-events: none; }
 .showcase-orbit--inner { width: 550px; height: 550px; background: radial-gradient(ellipse at 50% 40%, #dcecc9, #f1f6e9 62%, #fdfdfc); border-color: #edf2e8; }
-.showcase-phone { position: absolute; z-index: 2; top: 30px; left: 50%; width: 264px; height: 405px; transform: translateX(-50%); padding: 38px 13px 14px; border: 6px solid #242725; border-radius: 39px; background: #f5f9f6; box-shadow: 0 3px 0 #656a65 inset, 0 18px 34px #21362317; }
-.showcase-phone__notch { position: absolute; top: 10px; left: 50%; width: 72px; height: 17px; border-radius: 20px; background: #252825; transform: translateX(-50%); }
+.showcase-phone { position: absolute; z-index: 2; top: 18px; left: 50%; display: flex; flex-direction: column; width: 252px; height: 503px; transform: translateX(-50%); padding: 51px 11px 25px; border: 5px solid #242725; border-radius: 40px; background: #f5f9f6; box-shadow: 0 0 0 1px #798078 inset, 0 18px 34px #21362317; }
+.showcase-phone::after { content: ''; position: absolute; bottom: 8px; left: 50%; width: 78px; height: 3px; border-radius: 4px; background: #252825; transform: translateX(-50%); }
+.showcase-phone__status { position: absolute; top: 14px; left: 17px; right: 15px; display: flex; align-items: center; justify-content: space-between; height: 14px; color: #252825; }
+.showcase-phone__status > span { font: 600 10px/1 system-ui, sans-serif; }
+.showcase-phone__notch { position: absolute; top: 10px; left: 50%; width: 65px; height: 19px; border-radius: 20px; background: #141714; transform: translateX(-50%); }
 .showcase-phone__head { display: flex; align-items: center; gap: 9px; padding: 3px 2px 15px; border-bottom: 1px solid #dbe6dc; }
 .showcase-phone__head span { display: grid; gap: 3px; }
 .showcase-phone__head b { font-size: 15px; font-weight: 500; }
 .showcase-phone__head small { font-size: 12px; color: #617969; }
-.showcase-conversation { display: grid; gap: 13px; padding: 17px 0; }
+.showcase-conversation { display: grid; flex: 1; align-content: center; gap: 13px; padding: 17px 0; }
 .showcase-chat-label { font: 400 9px/1.4 var(--font-mono); letter-spacing: .08em; color: #677e6c; text-align: center; }
 .showcase-message { margin: 0; padding: 10px 12px; max-width: 90%; font-size: 14px; line-height: 1.4; }
 .showcase-message--in { justify-self: end; border-radius: 12px 12px 3px 12px; background: #fff; border: 1px solid #e0e8e1; }
@@ -52,54 +55,6 @@
 .showcase-ready b { font-size: 15px; font-weight: 500; }
 .showcase-ready small { color: #cadbc8; font-size: 11px; }
 
-/* Six equal cards, with a fixed preview area and room for readable text. */
-#services.home-services > .wrap { display: block; }
-.home-service-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; }
-#services.home-services .card { display: grid; grid-template-rows: 54px 40px 264px 52px; padding: 0; gap: 0; border-radius: 20px; align-self: stretch; }
-#services.home-services .card > h3 { min-height: 0; margin: 0; padding: 19px 20px 0; font-size: 20px; line-height: 27px; text-wrap: nowrap; }
-#services.home-services .card > h3 a { display: flex; align-items: center; gap: 8px; }
-#services.home-services .service-gallery__link > img { margin: 0; width: 23px; height: 23px; }
-#services.home-services .service-gallery__link::after { margin-left: auto; font-size: 16px; }
-#services.home-services .card > p { min-height: 0; max-width: none; padding: 0 20px 12px; margin: 0; font-size: 14px; line-height: 21px; }
-.home-service-visual { display: flex; align-items: stretch; min-width: 0; padding: 12px; background: linear-gradient(135deg, #f8fbf9, var(--scene-tint, #e7f1e9)); border-block: 1px solid #e0e7df; }
-#services .home-service-visual .workflow-demo { width: 100%; min-height: 0; min-width: 0; padding: 13px; gap: 12px; border-radius: 11px; align-content: center; font-size: 14px; }
-#services .home-service-visual .workflow-demo__head > b { font-size: 14px; }
-#services .home-service-visual .workflow-pipeline { min-height: 120px; }
-#services .home-service-visual .workflow-lead { min-height: 65px; padding: 7px; top: 37px; gap: 4px; }
-#services .home-service-visual .workflow-lead strong { font-size: 12px; }
-.home-demo-note { display: flex; align-items: center; gap: 7px; color: #546d59; font-size: 12px; }
-.home-demo-note b { margin-left: auto; font-size: 11px; font-weight: 500; }
-#services .home-service-visual .workflow-browser__bar { padding: 3px 8px; }
-#services .home-service-visual .workflow-browser__bar button { min-height: 44px; min-width: 44px; }
-#services .home-service-visual .workflow-page-copy { padding: 14px; gap: 8px; }
-#services .home-service-visual .workflow-page-copy > strong { font-size: 25px; }
-#services .home-service-visual .workflow-page-copy > button { min-height: 44px; font-size: 13px; margin: 0; }
-#services .home-service-visual .workflow-capture { font-size: 12px; padding-top: 10px; }
-#services .home-service-visual .workflow-ad-summary strong { font-size: 25px; }
-#services .home-service-visual .workflow-ad-summary small { font-size: 12px; }
-#services .home-service-visual .workflow-campaign { gap: 8px; }
-#services .home-service-visual .workflow-campaign > div > b { font-size: 13px; }
-#services .home-service-visual .workflow-campaign > strong { font-size: 22px; }
-#services .home-service-visual .workflow-outcome { padding-top: 8px; font-size: 12px; }
-#services .home-service-visual .workflow-request { padding: 10px; gap: 8px; }
-#services .home-service-visual .workflow-request > span { font-size: 13px; }
-#services .home-service-visual .workflow-answers { gap: 6px; }
-#services .home-service-visual .workflow-answers > div { padding: 11px 8px; gap: 4px; }
-#services .home-service-visual .workflow-answers b { font-size: 12px; }
-#services .home-service-visual .workflow-answers small { font-size: 11px; }
-#services .home-service-visual .workflow-handoff { padding: 10px; gap: 7px; }
-#services .home-service-visual .workflow-handoff b { font-size: 13px; }
-#services .home-service-visual .workflow-handoff small { font-size: 11px; }
-#services .home-service-visual .workflow-actions { gap: 7px; }
-#services .home-service-visual .workflow-actions > li { padding: 8px 10px; min-height: 40px; gap: 9px; }
-#services .home-service-visual .workflow-actions b { font-size: 13px; }
-#services .home-service-visual .workflow-documents { flex-wrap: nowrap; padding-bottom: 8px; gap: 8px; }
-#services .home-service-visual .workflow-documents > span { font-size: 13px; }
-#services .home-service-visual .workflow-match { gap: 7px; }
-#services .home-service-visual .workflow-match > div { padding: 9px; font-size: 13px; }
-#services .home-service-visual .workflow-exception { padding: 10px; font-size: 13px; }
-#services.home-services .card > .review-demo-link { align-self: center; justify-self: start; padding: 0; margin: 0 20px; min-height: 44px; display: inline-flex; align-items: center; font-size: 14px; }
-
 @media (prefers-reduced-motion: no-preference) {
   .showcase-stage.demo-looping .showcase-float { animation: showcase-float 6s ease-in-out infinite; }
   .showcase-stage.demo-looping .showcase-crm { animation-delay: -1.4s; }
@@ -118,15 +73,14 @@
   .showcase-tracking { left: 0; width: 190px; }
   .showcase-crm { right: 0; width: 200px; }
   .showcase-ready { right: 0; width: 210px; padding-inline: 12px; }
-  .showcase-phone { width: 240px; }
-  .home-service-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
+  .showcase-phone { width: 252px; }
 }
 @media (max-width: 767px) {
   #pipeline .journey-intro { align-items: start; margin-bottom: 12px; }
   .showcase-stage.journey-visual { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; height: auto; padding: 16px 0 4px; overflow: visible; }
   .showcase-orbit { width: 100%; height: 350px; top: 60px; transform: translate(-50%, 0); }
   .showcase-orbit--inner { width: 86%; height: 300px; top: 100px; }
-  .showcase-phone { position: relative; top: auto; left: auto; grid-column: 1 / -1; justify-self: center; transform: none; width: 250px; height: 396px; margin-bottom: 12px; }
+  .showcase-phone { position: relative; top: auto; left: auto; grid-column: 1 / -1; justify-self: center; transform: none; width: 252px; height: 503px; margin-bottom: 12px; }
   .showcase-float { position: relative; inset: auto; width: auto; min-width: 0; padding: 13px; border-radius: 12px; box-shadow: 0 4px 12px #1e3b2508; }
   .showcase-source { gap: 8px; }
   .showcase-source > img { width: 25px; height: 25px; }
@@ -144,18 +98,8 @@
   .showcase-ready__check { width: 26px; height: 26px; font-size: 17px; }
   .showcase-ready b { font-size: 14px; line-height: 1.3; }
   .showcase-ready small { font-size: 11px; line-height: 1.5; }
-  .home-service-grid { grid-template-columns: minmax(0,1fr); gap: 20px; }
-  #services.home-services .card { grid-template-rows: 54px 40px 264px 52px; }
-  #services.home-services .card > h3 { font-size: 20px; }
 }
 @media (max-width: 359px) {
-  #services.home-services .card > h3 { font-size: 18px; padding-inline: 16px; }
-  #services.home-services .card > p { padding-inline: 16px; font-size: 13px; }
-  .home-service-visual { padding: 9px; }
-  #services .home-service-visual .workflow-demo { padding: 10px; gap: 10px; }
-  #services .home-service-visual .workflow-ad-summary strong { font-size: 22px; }
-  .home-demo-note { flex-wrap: wrap; }
-  .home-demo-note b { margin-left: 0; }
   .showcase-float { padding: 10px; }
   .showcase-ready { gap: 7px; }
   .showcase-ready__check { width: 20px; height: 20px; font-size: 13px; }

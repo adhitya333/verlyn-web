@@ -55,26 +55,19 @@ html[data-theme="dark"] {
   --p-inv-accent: #0f0f0f; --p-inv-accent-ink: #ffffff; --p-inv-action: #0f0f0f; --p-inv-action-ink: #ffffff;
 }
 </style>
+
+<link rel="stylesheet" href="site.css?v=20261124-controls-1">
 <link rel="stylesheet" href="assets/ui/base.css">
-<link rel="stylesheet" href="assets/ui/window/fragment.css">
-<link rel="stylesheet" href="assets/ui/calendar/fragment.css">
 <link rel="stylesheet" href="assets/ui/checklist/fragment.css">
-<link rel="stylesheet" href="assets/ui/stat/fragment.css">
-<link rel="stylesheet" href="assets/ui/notify/fragment.css">
-<link rel="stylesheet" href="assets/ui/chat/fragment.css">
-<link rel="stylesheet" href="assets/ui/toggles/fragment.css">
-<link rel="stylesheet" href="assets/ui/doc/fragment.css">
-<link rel="stylesheet" href="assets/diagrams/diagram.css">
-<link rel="stylesheet" href="site.css?v=verlyn-20261123-9">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script src="assets/backgrounds/backgrounds.js"></script>
 <link rel="stylesheet" href="workflow.css?v=verlyn-20261123-10">
-<link rel="stylesheet" href="home-showcase.css?v=verlyn-20261123-10">
+<link rel="stylesheet" href="home-showcase.css?v=20261124-visuals-2">
 
-<link rel="stylesheet" href="polish.css?v=20261123-14">
-<link rel="stylesheet" href="refinements.css?v=20261123-15">
+<link rel="stylesheet" href="polish.css?v=20261124-iphone">
+<link rel="stylesheet" href="company.css?v=20261124-3">
 </head>
-<body>
+<body class="home-page">
 <!-- type: software (site-kind software): Verlyn Tech installs CRM, landing pages, ads, lead generation, AI agents and automation for UAE SMEs
      deal: hero centred, nav nav-mega, close close-word, footer footer-dark, rhythm surface-pairs, buttons arrow, mark wordmark, ground sky,
            palette soot-pale-lime (a near-black ground with a lime accent: the dark consoles AI tools run in, the lime of a live status light),
@@ -84,7 +77,7 @@ html[data-theme="dark"] {
 <header class="nav" data-verlyn-nav>
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
-    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+    <a class="nav__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
     <nav class="nav__links" aria-label="Main">
       <div class="nav__item"><a class="nav__link" href="index.html" aria-current="page">Home</a></div>
       <div class="nav__item">
@@ -105,7 +98,7 @@ html[data-theme="dark"] {
             </div>
             <a class="menu-card span-3 start-10" href="process.html">
               <div class="panel"><div class="stage stage--fade-br"><div class="at-corner" style="--ax:24px;--ay:24px">
-                <div class="ui ui-panel ui-checks" data-ui="checklist" data-ui-still>
+                <div class="ui ui-panel ui-checks">
                   <div class="ui-checks__head"><div class="ui-title">Pilot, day 30</div><span class="ui-spacer"></span><div class="ui-meta" data-checks-count>3 of 4</div></div>
                   <div class="ui-checks__bar"><i data-checks-bar style="--k:0.75"></i></div>
                   <ul class="ui-checks__list">
@@ -145,9 +138,10 @@ html[data-theme="dark"] {
         <p class="hero__lead">We connect your marketing, CRM and AI automation so your team can win more work and spend less time on admin.</p>
         <div class="btn-row"><a class="btn btn--primary" href="contact.html#book">Book a pilot call<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="services.html">Explore services</a></div>
       </div>
-      <div id="pipeline" class="home-showcase-slot" aria-label="How Verlyn connects your business"><div class="showcase-stage journey-visual" role="group" aria-label="A customer enquiry is answered on WhatsApp, captured in the CRM and assigned to your team, with its campaign source tracked.">
+      <div id="pipeline" class="home-showcase-slot" aria-label="How Verlyn connects your business"><div class="showcase-stage journey-visual" data-motion-preview role="group" aria-label="A customer enquiry is answered on WhatsApp, captured in the CRM and assigned to your team, with its campaign source tracked.">
         <div class="showcase-orbit showcase-orbit--outer" aria-hidden="true"></div><div class="showcase-orbit showcase-orbit--inner" aria-hidden="true"></div>
-        <div class="showcase-phone">
+        <div class="showcase-phone" aria-label="iPhone-style conversation preview">
+          <div class="showcase-phone__status" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 56 14" width="43" height="11"><path d="M1 11V9h2v2zm4 0V6h2v5zm4 0V3h2v8zm4 0V0h2v11z" fill="currentColor"/><path d="M20 4q7-7 14 0m-11 3q4-4 8 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="27" cy="10" r="1.2" fill="currentColor"/><rect x="39" y="2" width="14" height="9" rx="2" fill="none" stroke="currentColor"/><rect x="41" y="4" width="10" height="5" rx="1" fill="currentColor"/><path d="M55 5v3" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <div class="showcase-phone__notch" aria-hidden="true"></div>
           <div class="showcase-phone__head"><img src="assets/icons/whatsapp.svg" alt="WhatsApp" width="29" height="29"><span><b>Verlyn assistant</b><small>Enquiries, handled.</small></span></div>
           <div class="showcase-conversation">
@@ -157,93 +151,29 @@ html[data-theme="dark"] {
             <div class="showcase-captured"><span>✓ Details captured</span><span>✓ Team assigned</span></div>
             <div class="showcase-phone__done"><span aria-hidden="true">✓</span> Follow-up scheduled</div>
           </div>
-          <div class="showcase-phone__foot"><img src="assets/icons/ui-bot.svg" alt="" width="18" height="18"><span>AI + your team</span></div>
+          <div class="showcase-phone__foot"><img src="assets/icons/ui-bot.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>AI + your team</span></div>
         </div>
-        <div class="showcase-float showcase-source"><img src="assets/icons/google-ads.svg" alt="" width="32" height="32"><span><small>Paid campaign</small><b>New enquiry</b></span><i class="showcase-tick" aria-hidden="true">✓</i></div>
-        <div class="showcase-float showcase-crm"><div class="showcase-card-title"><img src="assets/icons/ui-database.svg" alt="" width="24" height="24"><b>CRM updated</b></div><div class="showcase-mini-pipeline" aria-hidden="true"><span>New<i></i></span><span>Assigned<i class="is-filled"></i></span><span>Won<i></i></span></div></div>
-        <div class="showcase-float showcase-tracking"><div class="showcase-card-title"><img src="assets/icons/google-analytics.svg" alt="" width="24" height="24"><b>Source tracked</b></div><div class="showcase-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>From ad to enquiry</small></div>
-        <div class="showcase-float showcase-ready"><span class="showcase-ready__check" aria-hidden="true">✓</span><span><b>Ready for your team</b><small>Qualified. Assigned. Connected.</small></span></div>
+        <div class="showcase-float showcase-source"><img src="assets/icons/google-ads.svg" alt="" width="32" height="32" loading="lazy" decoding="async"><span><small>Paid campaign</small><b>New enquiry</b></span><i class="showcase-tick" aria-hidden="true">✓</i></div>
+        <div class="showcase-float showcase-crm"><div class="showcase-card-title"><img src="assets/icons/ui-database.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><b>CRM updated</b></div><div class="showcase-mini-pipeline" aria-hidden="true"><span>New<i></i></span><span>Assigned<i class="is-filled"></i></span><span>Won<i></i></span></div></div>
+        <div class="showcase-float showcase-tracking"><div class="showcase-card-title"><img src="assets/icons/google-analytics.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><b>Source tracked</b></div><div class="showcase-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>From ad to enquiry</small></div>
+        <div class="showcase-float showcase-ready"><span class="showcase-ready__check" aria-hidden="true">✓</span><span><b>Ready for your team</b><small>Qualified. Assigned. Connected.</small></span></div><button class="showcase-pause" type="button" data-preview-pause aria-pressed="false">Pause animation</button>
       </div></div>
     </div></div>
   </section>
 
-  <section class="section section--tight service-gallery home-services" id="services" aria-labelledby="services-h">
-    <div class="wrap">
-      <div class="section-head"><h2 id="services-h">Explore our services</h2></div>
-      <div class="home-service-grid">
-        <article class="card scene--mint">
-          <h3><a class="service-gallery__link" href="crm.html"><img src="assets/icons/ui-database.svg" alt="" width="23" height="23">CRM setup</a></h3><p>Every lead. One clear pipeline.</p>
-          <div class="home-service-visual"><div class="workflow-demo crm-dashboard crm-dashboard--compact" role="group" aria-label="Example CRM dashboard with lead totals, pipeline activity and follow-up queue">
-
- <div class="crm-dashboard__metrics"><div><small>Open leads</small><b>12</b></div><div><small>Follow-ups</small><b>5</b></div><div><small>Booked</small><b>8</b></div></div>
- <div class="crm-dashboard__chart"><div><b>Pipeline activity</b><span>Enquiries <i></i> Bookings</span></div><svg viewBox="0 0 360 90" role="img" aria-label="Illustrative enquiry and booking activity"><path class="crm-gridline" d="M0 18H360M0 45H360M0 72H360"/><path class="crm-chart-area" d="M0 75 36 63 72 68 108 46 144 53 180 30 216 39 252 18 288 25 324 12 360 8V90H0Z"/><path class="crm-chart-line" d="M0 75 36 63 72 68 108 46 144 53 180 30 216 39 252 18 288 25 324 12 360 8"/><path class="crm-chart-booked" d="M0 82 36 79 72 80 108 68 144 72 180 56 216 60 252 41 288 46 324 31 360 27"/></svg></div>
- <div class="crm-dashboard__queue"><span><i>FA</i><b>Fatima A.</b><small>Reem · follow-up</small></span><strong>Assigned</strong></div>
- </div></div><a class="link review-demo-link" href="crm.html#get">Explore CRM</a>
-        </article>
-        <article class="card scene--sea">
-          <h3><a class="service-gallery__link" href="landing-pages.html"><img src="assets/icons/demo/ui-globe.svg" alt="" width="23" height="23">Landing pages &amp; SEO</a></h3><p>Get found. Capture the enquiry.</p>
-          <div class="home-service-visual"><div class="workflow-demo workflow-page" role="group" aria-label="A bilingual landing page captures a search enquiry">
-            <div class="workflow-browser" data-workflow-page><div class="workflow-browser__bar"><span>Your business</span><div role="group" aria-label="Preview language"><button type="button" data-workflow-language="en" aria-pressed="true">EN</button><button type="button" data-workflow-language="ar" aria-pressed="false">AR</button></div></div><img class="workflow-page-art" src="assets/img/landing-business-ai.webp" alt="AI-generated Abu Dhabi waterfront architecture for a sample business landing page" width="900" height="600" loading="lazy" decoding="async"><div class="workflow-page-copy"><strong data-page-en>Book a visit</strong><strong data-page-ar lang="ar" dir="rtl" hidden>احجز موعدك</strong><button type="button" data-workflow-enquiry>Enquire <span aria-hidden="true">↗</span></button></div></div>
-            <div class="workflow-capture" role="status" data-workflow-result><img src="assets/icons/google-analytics.svg" alt="" width="18" height="18">Search enquiry tracked</div>
-          </div></div><a class="link review-demo-link" href="landing-pages.html#get">Explore landing pages</a>
-        </article>
-        <article class="card scene--blue">
-          <h3><a class="service-gallery__link" href="paid-ads.html"><img src="assets/icons/google-ads.svg" alt="" width="23" height="23">Paid advertising</a></h3><p>Connect ad spend to bookings.</p>
-          <div class="home-service-visual"><div class="workflow-demo workflow-ads" role="group" aria-label="Example campaign spend of AED 600 produces 8 bookings at AED 75 per booking">
-            <div class="workflow-ad-summary"><span><small>Example spend</small><strong>AED 600</strong></span><span><small>Per booking</small><strong>AED 75</strong></span></div>
-            <div class="workflow-campaign"><img src="assets/icons/google-ads.svg" alt="" width="25" height="25"><div><b>Search</b><span class="workflow-ad-track"><i style="--ad-width:60%"></i></span></div><strong>3<small>bookings</small></strong></div>
-            <div class="workflow-campaign"><img src="assets/icons/meta.svg" alt="" width="25" height="25"><div><b>Social</b><span class="workflow-ad-track"><i style="--ad-width:100%"></i></span></div><strong>5<small>bookings</small></strong></div>
-            <div class="workflow-outcome">8 bookings · source tracked</div>
-          </div></div><a class="link review-demo-link" href="paid-ads.html#get">Explore paid ads</a>
-        </article>
-        <article class="card scene--peach">
-          <h3><a class="service-gallery__link" href="lead-generation.html"><img src="assets/icons/ui-user.svg" alt="" width="23" height="23">Lead generation</a></h3><p>Send qualified enquiries to sales.</p>
-          <div class="home-service-visual"><div class="workflow-demo workflow-qualify" role="group" aria-label="A property enquiry is qualified by budget, location and timing before sales handoff">
-            <div class="workflow-request"><img src="assets/icons/demo/ui-message-circle.svg" alt="" width="24" height="24"><span>“A two-bed in Al Reem?”</span></div>
-            <div class="workflow-answers"><div style="--phase:0"><small>Budget</small><b>120k</b></div><div style="--phase:1"><small>Area</small><b>Al Reem</b></div><div style="--phase:2"><small>Timing</small><b>30 days</b></div></div>
-            <div class="workflow-handoff"><img src="assets/icons/ui-user.svg" alt="" width="23" height="23"><span><b>Ready for sales</b><small>Assigned to the right team</small></span><strong>✓</strong></div>
-          </div></div><a class="link review-demo-link" href="lead-generation.html#get">Explore lead generation</a>
-        </article>
-        <article class="card scene--mint">
-          <h3><a class="service-gallery__link" href="agentic-ai.html"><img src="assets/icons/ui-bot.svg" alt="" width="23" height="23">AI agents</a></h3><p>One request. The next steps handled.</p>
-          <div class="home-service-visual"><div class="workflow-demo workflow-agent" role="group" aria-label="An AI agent checks availability, books a visit and updates the CRM">
-            <div class="workflow-request"><img src="assets/icons/whatsapp.svg" alt="WhatsApp" width="24" height="24"><span>“Can I book a visit?”</span></div>
-            <ol class="workflow-actions"><li style="--phase:0"><img src="assets/icons/google-calendar.svg" alt="" width="23" height="23"><b>Check availability</b><i>✓</i></li><li style="--phase:1"><img src="assets/icons/ui-bot.svg" alt="" width="23" height="23"><b>Confirm booking</b><i>✓</i></li><li style="--phase:2"><img src="assets/icons/ui-database.svg" alt="" width="23" height="23"><b>Update CRM</b><i>✓</i></li></ol>
-          </div></div><a class="link review-demo-link" href="agentic-ai.html#get">Explore AI agents</a>
-        </article>
-        <article class="card scene--sand">
-          <h3><a class="service-gallery__link" href="ai-automation.html"><img src="assets/icons/google-sheets.svg" alt="" width="23" height="23">Workflow automation</a></h3><p>Less admin. Clearer approvals.</p>
-          <div class="home-service-visual"><div class="workflow-demo workflow-invoice" role="group" aria-label="An invoice is checked against a purchase order and a difference is sent for approval">
-            <div class="workflow-documents"><span><img src="assets/icons/demo/ui-file-text.svg" alt="" width="20" height="20">Invoice</span><span><img src="assets/icons/google-sheets.svg" alt="" width="20" height="20">Order</span></div>
-            <div class="workflow-match"><div><span>Invoice</span><b>AED 2,480</b></div><div><span>Purchase order</span><b>AED 2,400</b></div></div>
-            <div class="workflow-exception"><b>AED 80 difference</b><small>Sent for approval</small></div>
-          </div></div><a class="link review-demo-link" href="ai-automation.html#get">Explore automation</a>
-        </article>
+  <section class="section company-section" id="services" aria-labelledby="company-h">
+    <div class="wrap company-layout">
+      <div class="company-copy"><p class="company-eyebrow">WHAT VERLYN DOES</p><h2 id="company-h">More customers.<br>Less busywork.</h2><p>We bring in customers with websites, campaigns and a connected CRM.</p><p>We automate follow-ups and admin with AI, keeping your team in control.</p><a class="link" href="services.html">Explore all six services</a></div>
+      <div class="company-motion" data-motion-preview role="group" aria-label="Verlyn connects marketing and CRM to attract, respond and book customers, and automates documents, checks and staff approvals.">
+        <div class="company-motion__heading"><img src="assets/img/verlyn-mark.png" width="38" height="22" alt="Verlyn" loading="lazy"><span>Your tools, working together.</span></div>
+        <div class="company-lane company-lane--sales"><p>WIN CUSTOMERS</p><ol><li><img src="assets/icons/google-ads.svg" width="27" height="27" alt="" loading="lazy"><b>Attract</b></li><li><img src="assets/icons/whatsapp.svg" width="27" height="27" alt="" loading="lazy"><b>Respond</b></li><li><img src="assets/icons/google-calendar.svg" width="27" height="27" alt="" loading="lazy"><b>Book</b></li></ol></div>
+        <div class="company-lane company-lane--admin"><p>AUTOMATE ADMIN</p><ol><li><img src="assets/icons/pdf.svg" width="27" height="27" alt="" loading="lazy"><b>Receive</b></li><li><img src="assets/icons/ui-bot.svg" width="27" height="27" alt="" loading="lazy"><b>Check</b></li><li><img src="assets/icons/ui-user.svg" width="27" height="27" alt="" loading="lazy"><b>Approve</b></li></ol></div>
+        <div class="company-outcome"><span>AI handles the steps. Your team stays in control.</span><button type="button" data-preview-pause aria-pressed="false">Pause animation</button></div>
       </div>
     </div>
   </section>
 
-  <section class="section section--tight" id="connects" aria-labelledby="connects-h">
-    <div class="wrap">
-      <div class="grid">
-        <div class="span-5 stack-5">
-          <h2 id="connects-h">See what connects behind the scenes</h2>
-          <p class="t-lead">Connect your existing tools so the source of an enquiry stays visible through follow-up, booking and reporting.</p>
-          <ul class="steps">
-            <li><span class="step-n">01</span><b>Ad on Meta, Google or TikTok</b></li>
-            <li><span class="step-n">02</span><b>WhatsApp reply and CRM follow-up</b></li>
-            <li><span class="step-n">03</span><b>Bookings linked to the original campaign</b></li>
-          </ul>
-          <a class="link" href="services.html">See all six services</a>
-        </div>
-        <div class="frame frame--split span-6 start-7"><div class="dg" data-diagram><script type="application/json">{"layout":"hub","alt":"The Verlyn system connects WhatsApp, Instagram, Meta ads, Google Ads, TikTok, Google Calendar, Google Sheets and Gmail.","center":{"label":"Verlyn system"},"spokes":[{"label":"WhatsApp","icon":"whatsapp"},{"label":"Instagram","icon":"instagram"},{"label":"Meta ads","icon":"meta"},{"label":"Google Ads","icon":"google-ads"},{"label":"TikTok","icon":"tiktok"},{"label":"Google Calendar","icon":"google-calendar"},{"label":"Google Sheets","icon":"google-sheets"},{"label":"Gmail","icon":"gmail"}],"motion":{}}</script></div></div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="section section--tight" id="process" aria-labelledby="process-h">
+<section class="section section--tight" id="process" aria-labelledby="process-h">
   <div class="wrap">
     <div class="compact-head"><h2 id="process-h">Your first 30 days</h2><a class="link" href="process.html">See the delivery plan</a></div>
     <div class="pilot-story" data-scene><div class="scene-tabs" role="tablist" aria-label="Pilot stages"><button type="button" role="tab" id="pilot-t0" aria-controls="pilot-p0" aria-selected="true" tabindex="0">Discover</button>
@@ -311,7 +241,7 @@ html[data-theme="dark"] {
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
-          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-logo.jpeg" alt="" width="44" height="27"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
+          <a class="nav__logo footer__logo" href="index.html"><img class="verlyn-logo" src="assets/img/verlyn-mark.png" alt="" width="44" height="27" loading="lazy" decoding="async"><span>Verlyn<span class="logo-tech"> Tech</span></span></a>
           <p class="footer__lede">Growth systems for UAE SMEs, from Abu Dhabi.</p>
         </div>
         <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="crm.html">CRM</a></li><li><a href="paid-ads.html">Paid ads</a></li><li><a href="agentic-ai.html">Agentic AI</a></li></ul></div>
@@ -330,7 +260,7 @@ html[data-theme="dark"] {
 <script type="module" src="assets/system.js?v=verlyn-20261123-9"></script>
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>
-<script type="module" src="assets/diagrams/mount.js"></script>
-<script type="module" src="site.js?v=20261123-14"></script>
+
+<script type="module" src="site.js?v=20261124-controls-1"></script>
 </body>
 </html>
